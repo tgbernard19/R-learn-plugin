@@ -1,0 +1,53 @@
+---
+title: "Function notebook"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+library(rlearn)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+<!--
+How this notebook works
+
+Each section is one function:
+  1. Describe in English what the function should do: inputs, output, edge cases.
+  2. Write your attempt in an R chunk. Rough is fine, even pseudocode.
+  3. Put your cursor in the chunk and run "Ask Claude" (bind it to a shortcut
+     under Tools > Modify Keyboard Shortcuts). Claude's answer appears below.
+     Or insert a {claude} chunk yourself to ask a specific question.
+  4. Read the answer, then write or adopt the next version and try it.
+
+Modes (set with `#| mode:` in a {claude} chunk):
+  try      feedback on your attempt, a revised version, and a line-by-line walkthrough
+  explain  in-depth explanation of code, output or an error
+  review   code review: edge cases, interface, tests to add
+  hint     a nudge only, no solution
+  ask      any question
+-->
+
+## `summarise_by_group()`
+
+Takes a data frame, the name of a grouping column and the name of a numeric
+column. Returns one row per group with the mean and the number of
+non-missing values. Missing values in the numeric column are ignored.
+
+```{r}
+summarise_by_group <- function(df, group, value) {
+  groups <- unique(df[[group]])
+  out <- data.frame()
+  for (g in groups) {
+    x <- df[df[[group]] == g, value]
+    out <- rbind(out, data.frame(group = g, mean = mean(x), n = length(x)))
+  }
+  out
+}
+
+summarise_by_group(airquality, "Month", "Ozone")
+```
+
+```{claude}
+#| mode: try
+Does this handle the NAs in Ozone the way I described?
+```

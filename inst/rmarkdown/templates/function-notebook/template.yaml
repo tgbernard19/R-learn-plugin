@@ -1,0 +1,5 @@
+name: Function notebook (rlearn)
+description: >
+  Build an analysis one function at a time, asking Claude about each one in
+  {claude} chunks.
+create_dir: false

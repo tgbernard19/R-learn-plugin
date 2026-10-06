@@ -1,0 +1,22 @@
+test_that("knitting shows questions and keeps answers, without calling Claude", {
+  old <- options(rlearn.chat_fn = function(...) stop("should not be called"))
+  on.exit(options(old))
+  lines <- apply_edit(doc(), response_edit(doc(), 15, "An answer.", "review"))
+  rmd <- tempfile(fileext = ".Rmd")
+  writeLines(lines, rmd)
+  md <- knitr::knit(rmd, output = tempfile(fileext = ".md"), quiet = TRUE)
+  out <- readLines(md)
+  expect_true(any(grepl("You asked Claude", out)))
+  expect_true("Is this ok for NA?" %in% out)
+  expect_true("An answer." %in% out)
+  expect_false(any(grepl("#| mode", out, fixed = TRUE)))
+})
+
+test_that("rlearn.show = FALSE hides questions", {
+  old <- options(rlearn.show = FALSE)
+  on.exit(options(old))
+  rmd <- tempfile(fileext = ".Rmd")
+  writeLines(doc(), rmd)
+  out <- readLines(knitr::knit(rmd, output = tempfile(fileext = ".md"), quiet = TRUE))
+  expect_false(any(grepl("You asked Claude", out)))
+})

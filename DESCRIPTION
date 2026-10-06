@@ -1,0 +1,24 @@
+Package: rlearn
+Title: Talk to Claude About Your Code, One Function at a Time
+Version: 0.1.0
+Authors@R: person("R-learn-plugin", "authors", role = c("aut", "cre"),
+    email = "tgberna@sandia.gov")
+Description: Adds a 'claude' chunk type to R Markdown and a few 'RStudio'
+    add-ins. You write a function (or an English description of one) in an R
+    chunk, ask a question in a 'claude' chunk below it, and Claude's answer is
+    written into the notebook underneath. Claude sees your code and its output,
+    and is instructed to explain every piece of code it suggests.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+    evaluate,
+    httr2,
+    knitr (>= 1.35),
+    rstudioapi,
+    yaml
+Suggests:
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.1

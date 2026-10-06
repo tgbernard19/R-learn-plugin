@@ -1,0 +1,14 @@
+Name: Ask Claude
+Description: Answer the {claude} chunk at the cursor, or ask about the R chunk at the cursor.
+Binding: addin_ask
+Interactive: false
+
+Name: Insert Claude chunk
+Description: Insert a {claude} chunk at the cursor.
+Binding: addin_insert
+Interactive: false
+
+Name: Adopt Claude's code
+Description: Copy the main code block from the Claude answer at the cursor into a new R chunk.
+Binding: addin_adopt
+Interactive: false
