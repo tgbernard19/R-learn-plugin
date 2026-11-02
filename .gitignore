@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 *.html
+analysis/varala_n_timecourse/data/
+analysis/varala_n_timecourse/cache/
+__pycache__/
