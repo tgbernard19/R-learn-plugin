@@ -75,7 +75,7 @@ plt.rcParams.update({
 
 
 def tlabel(t):
-    return f"{t} min" if t < 60 else f"{t // 60} h"
+    return f"{t} min" if t < 60 else f"{t / 60:g} h"
 
 
 def save(fig, name):
@@ -249,7 +249,12 @@ def spline_test(samples, df, time_scale):
     # basis has no intercept. Tested block = N x spline(time), df coefficients.
     Xd = np.column_stack([np.ones(len(t)), basis, isN * basis])
     p, d0 = moderated_F(E, Xd, list(range(1 + df, 1 + 2 * df)), amean)
-    return pd.Series(p, index=cts.index), d0
+    # Largest fitted |N - KCl| log2 difference over the sampled times (effect size).
+    B = np.linalg.lstsq(Xd, E.T, rcond=None)[0].T
+    grid = np.unique(tt)
+    gb = bspline_basis(np.concatenate([grid, tt]), df, tt)[:len(grid)]
+    maxdiff = np.abs(B[:, 1 + df:] @ gb.T).max(axis=1)
+    return pd.Series(p, index=cts.index), d0, pd.Series(maxdiff, index=cts.index)
 
 
 spline_rows = []
@@ -259,17 +264,19 @@ no_odd = list(rest)
 for subset_name, samples in [("all 57 samples", all_s), ("without 10/15 min", no_odd)]:
     for scale in ["linear", "log"]:
         for df in [3, 4, 5]:
-            p, d0 = spline_test(samples, df, scale)
+            p, d0, maxdiff = spline_test(samples, df, scale)
             q = multipletests(p, method="fdr_bh")[1]
             for fdr in [0.01, 0.05]:
                 n = int((q < fdr).sum())
+                n1 = int(((q < fdr) & (maxdiff.values > 1)).sum())
                 spline_rows.append(dict(samples=subset_name, time_scale=scale, spline_df=df,
-                                        FDR=fdr, n_genes=n, prior_df=round(float(d0), 1)))
+                                        FDR=fdr, n_genes=n, n_genes_max_abs_log2diff_gt1=n1,
+                                        prior_df=round(float(d0), 1)))
             spline_sets[(subset_name, scale, df)] = pd.Series(q, index=cts.index)
 spline_tab = pd.DataFrame(spline_rows)
 spline_tab.to_csv(os.path.join(OUT, "spline_sanity_check_counts.csv"), index=False)
 print(spline_tab.pivot_table(index=["samples", "time_scale", "spline_df"], columns="FDR",
-                             values="n_genes").to_string())
+                             values=["n_genes", "n_genes_max_abs_log2diff_gt1"]).to_string())
 RESULTS["spline_grid"] = spline_rows
 
 
@@ -368,16 +375,20 @@ def jaccard(sets, order):
     return J
 
 
-def greedy(sets, order):
+def greedy(sets, order, support=None):
     """Repeatedly drop the point whose removal loses the fewest genes not
-    detected at any other remaining point. Ties -> smaller set dropped first."""
+    detected at any other remaining point. Ties -> smaller set dropped first.
+    support: optional {t: set} of a looser 'still detected' call (nominal
+    p < 0.05, same direction). With it, a gene called at t only counts as lost
+    if no remaining point even nominally supports it ('soft' criterion)."""
+    support = support or sets
     remaining = list(order)
     total = len(set().union(*sets.values()))
     rows = []
     while len(remaining) > 1:
         loss = {}
         for t in remaining:
-            others = set().union(*(sets[o] for o in remaining if o != t))
+            others = set().union(*(support[o] for o in remaining if o != t))
             loss[t] = len(sets[t] - others)
         t_drop = min(remaining, key=lambda t: (loss[t], len(sets[t]), t))
         remaining.remove(t_drop)
@@ -389,15 +400,64 @@ def greedy(sets, order):
     return pd.DataFrame(rows)
 
 
-over_rows, greedy_tabs, cum_tabs, jac = [], {}, {}, {}
-for scope, times in [("all", TIMES), ("planned", PLANNED)]:
+def nominal_sets(res, times):
+    """Genes with nominal p < 0.05 at t, keyed by (gene, sign) so that support
+    has to be in the same direction."""
+    ok = res[res.pvalue < 0.05]
+    return {t: set(zip(ok.loc[ok.time_min == t, "gene"], np.sign(ok.loc[ok.time_min == t, "log2FoldChange"])))
+            for t in times}
+
+
+def signed_sets(res, lfc, times):
+    sig = res[(res.padj < ALPHA) & (res.log2FoldChange.abs() > lfc)]
+    return {t: set(zip(sig.loc[sig.time_min == t, "gene"], np.sign(sig.loc[sig.time_min == t, "log2FoldChange"])))
+            for t in times}
+
+
+# Planned-design proxies: 15/30/60/120 min exist in the data, but 15 min sits in
+# the anomalous 10/15 min batch, so 'planned_alt' swaps in 20 min (no-10/15 model).
+PLANNED_ALT = [20, 30, 60, 120]
+greedy_tabs, greedy_soft, cum_tabs, jac = {}, {}, {}, {}
+for scope, times in [("all", TIMES), ("planned", PLANNED), ("planned_alt", PLANNED_ALT)]:
     for lfc in LFC_LEVELS:
         for model, res in [("all samples", de_main), ("without 10/15", de_sens)]:
             tt = [t for t in times if t in set(res.time_min)]
+            if len(tt) < len(times) and scope != "all":
+                continue
             S = de_sets(res, lfc, tt)
             cum_tabs[(scope, lfc, model)] = cumulative(S, tt)
             greedy_tabs[(scope, lfc, model)] = greedy(S, tt)
+            greedy_soft[(scope, lfc, model)] = greedy(signed_sets(res, lfc, tt), tt, nominal_sets(res, tt))
             jac[(scope, lfc, model)] = jaccard(S, tt)
+
+# log2FC agreement between time points: Spearman correlation of N-vs-KCl log2FC
+# over the union of DE genes (padj < 0.05 at any point). Threshold-free view of
+# whether two points report the same response.
+union_genes = sorted(set().union(*de_sets(de_main, 0.0, TIMES).values()))
+lfc_wide = (de_main.pivot_table(index="gene", columns="time_min", values="log2FoldChange")
+            .reindex(union_genes)[TIMES])
+lfc_corr = lfc_wide.corr(method="spearman")
+lfc_corr.round(3).rename_axis("time_min").to_csv(os.path.join(OUT, "lfc_correlation_all_timepoints.csv"))
+RESULTS["lfc_corr"] = lfc_corr.round(3).to_dict()
+
+# Diagnostic: does each point's log2FC agree with the other points for the
+# genes it calls itself, and does it track expression level (a sign of a
+# technical, composition-type difference between the KCl and N libraries)?
+lfc_all = de_main.pivot_table(index="gene", columns="time_min", values="log2FoldChange")
+padj_all = de_main.pivot_table(index="gene", columns="time_min", values="padj").reindex(lfc_all.index).fillna(1)
+bmean = np.log(de_main.groupby("gene").baseMean.first().reindex(lfc_all.index))
+diag = []
+for t in TIMES:
+    own = padj_all[t] < ALPHA
+    rho_others = lfc_all[own].corr(method="spearman")[t].drop(t)
+    diag.append(dict(time_min=t, n_de=int(own.sum()),
+                     median_rho_with_other_points_on_own_DE_genes=round(float(rho_others.median()), 3),
+                     min_rho=round(float(rho_others.min()), 3), max_rho=round(float(rho_others.max()), 3),
+                     rho_lfc_vs_log_baseMean=round(float(lfc_all[t].corr(bmean, method="spearman")), 3)))
+diag = pd.DataFrame(diag)
+diag.to_csv(os.path.join(OUT, "lfc_consistency_diagnostics.csv"), index=False)
+print(diag.to_string(index=False))
+RESULTS["lfc_diag"] = diag.to_dict("records")
 
 jac[("all", 0.0, "all samples")].round(3).rename_axis("time_min").to_csv(
     os.path.join(OUT, "jaccard_matrix_all_timepoints.csv"))
@@ -409,11 +469,13 @@ for (scope, lfc, model), d in cum_tabs.items():
     frames.append(d.assign(scope=scope, lfc_threshold=lfc, model=model))
 pd.concat(frames).to_csv(os.path.join(OUT, "cumulative_union.csv"), index=False, float_format="%.4f")
 frames = []
-for (scope, lfc, model), d in greedy_tabs.items():
-    frames.append(d.assign(scope=scope, lfc_threshold=lfc, model=model))
+for crit, tabs in [("strict", greedy_tabs), ("soft", greedy_soft)]:
+    for (scope, lfc, model), d in tabs.items():
+        frames.append(d.assign(criterion=crit, scope=scope, lfc_threshold=lfc, model=model))
 pd.concat(frames).to_csv(os.path.join(OUT, "greedy_redundancy.csv"), index=False, float_format="%.4f")
 RESULTS["cumulative"] = {f"{k[0]}|{k[1]}|{k[2]}": v.to_dict("records") for k, v in cum_tabs.items()}
 RESULTS["greedy"] = {f"{k[0]}|{k[1]}|{k[2]}": v.to_dict("records") for k, v in greedy_tabs.items()}
+RESULTS["greedy_soft"] = {f"{k[0]}|{k[1]}|{k[2]}": v.to_dict("records") for k, v in greedy_soft.items()}
 
 # ---- 4a. bar chart of DE genes per time point, up / down --------------------
 fig, axes = plt.subplots(1, 3, figsize=(13, 4.2), sharey=False)
@@ -466,6 +528,10 @@ def plot_cumulative(scope, fname, title):
         a2.plot([TIMES.index(t) for t in d.time_min], d.frac_of_final_union, color=INK2, lw=1.4,
                 ls="--", marker="o", ms=4,
                 label=f"padj only, 10/15 min removed (n = {int(d.cumulative_union.iloc[-1])})")
+    if scope == "planned":
+        d = cum_tabs[("planned_alt", 0.0, "without 10/15")]
+        a2.plot(np.arange(len(d)), d.frac_of_final_union, color=INK2, lw=1.4, ls="--", marker="o", ms=4,
+                label=f"padj only, 20 min instead of 15, 10/15 removed (n = {int(d.cumulative_union.iloc[-1])})")
     a2.set_xticks(x, [tlabel(t) for t in cum_tabs[(scope, 0.0, 'all samples')].time_min], fontsize=8)
     a2.set_ylim(0, 1.04)
     a2.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1))
@@ -484,62 +550,74 @@ plot_cumulative("planned", "fig4e_cumulative_union_planned.png",
 
 
 # ---- 4c / 4e. Jaccard heatmap -------------------------------------------------
-def plot_jaccard(scope, fname, title):
-    J = jac[(scope, 0.0, "all samples")]
+def plot_matrix(M_df, fname, title, cbar_label, diag_text=None, vmin=0.0, vmax=None):
     from matplotlib.colors import LinearSegmentedColormap
     cmap = LinearSegmentedColormap.from_list("seq", SEQ)
-    n = len(J)
+    n = len(M_df)
     fig, ax = plt.subplots(figsize=(1.0 + 0.62 * n, 0.6 + 0.55 * n))
-    M = J.values.copy()
+    M = M_df.values.astype(float).copy()
     np.fill_diagonal(M, np.nan)
-    vmax = max(0.05, np.nanmax(M))
-    im = ax.imshow(M, cmap=cmap, vmin=0, vmax=vmax)
+    vmax = vmax if vmax is not None else max(0.05, np.nanmax(M))
+    im = ax.imshow(M, cmap=cmap, vmin=vmin, vmax=vmax)
     for i in range(n):
         for j in range(n):
             if i == j:
-                ax.text(j, i, f"{len(de_sets(de_main, 0.0, [J.index[i]])[J.index[i]])}",
-                        ha="center", va="center", fontsize=7, color=INK2, style="italic")
+                if diag_text is not None:
+                    ax.text(j, i, diag_text[i], ha="center", va="center", fontsize=7, color=INK2,
+                            style="italic")
                 continue
             v = M[i, j]
             ax.text(j, i, f"{v:.2f}", ha="center", va="center", fontsize=7.5,
-                    color=SURFACE if v > 0.55 * vmax else INK)
-    ax.set_xticks(range(n), [tlabel(t) for t in J.columns], rotation=45, ha="right")
-    ax.set_yticks(range(n), [tlabel(t) for t in J.index])
+                    color=SURFACE if (v - vmin) > 0.55 * (vmax - vmin) else INK)
+    ax.set_xticks(range(n), [tlabel(t) for t in M_df.columns], rotation=45, ha="right")
+    ax.set_yticks(range(n), [tlabel(t) for t in M_df.index])
     ax.grid(False)
     for s_ in ax.spines.values():
         s_.set_visible(False)
     cb = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.03)
-    cb.set_label("Jaccard index")
+    cb.set_label(cbar_label)
     cb.outline.set_visible(False)
     ax.set_title(title, loc="left")
     fig.tight_layout()
     save(fig, fname)
 
 
-plot_jaccard("all", "fig4c_jaccard_all.png", "4c  Jaccard similarity of DE sets\n(padj < 0.05; diagonal = set size)")
-plot_jaccard("planned", "fig4e_jaccard_planned.png", "4e  Jaccard, planned points\n(padj < 0.05; diagonal = set size)")
+for scope, fname, title in [
+        ("all", "fig4c_jaccard_all.png", "4c  Jaccard similarity of DE sets\n(padj < 0.05; diagonal = set size)"),
+        ("planned", "fig4e_jaccard_planned.png", "4e  Jaccard, planned points\n(padj < 0.05; diagonal = set size)")]:
+    J = jac[(scope, 0.0, "all samples")]
+    sizes = [str(len(de_sets(de_main, 0.0, [t])[t])) for t in J.index]
+    plot_matrix(J, fname, title, "Jaccard index", diag_text=sizes)
+plot_matrix(lfc_corr, "fig4c_lfc_correlation_all.png",
+            "4c (companion)  Spearman correlation of N-vs-KCl\nlog2FC across time points "
+            f"(union of DE genes, n = {len(union_genes)})", "Spearman rho", vmin=0.0, vmax=1.0)
 
 
 # ---- 4d / 4e. greedy redundancy ---------------------------------------------
 def plot_greedy(fname, title):
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4.2), gridspec_kw={"width_ratios": [9, 4]})
-    for ax, scope in zip(axes, ["all", "planned"]):
-        for i, lfc in enumerate(LFC_LEVELS):
-            g = greedy_tabs[(scope, lfc, "all samples")]
-            full = len(set().union(*de_sets(de_main, lfc, TIMES if scope == "all" else PLANNED).values()))
+    panels = [("all", "all samples", "All 9 points"),
+              ("planned", "all samples", "Planned: 15, 30, 60, 120 min"),
+              ("planned_alt", "without 10/15", "Planned with 20 min for 15 min\n(10/15 min samples removed)")]
+    fig, axes = plt.subplots(1, 3, figsize=(15, 4.4), gridspec_kw={"width_ratios": [9, 4, 4]})
+    lines = [("strict", 0.0, SERIES[0], "-", "padj < 0.05"),
+             ("strict", 1.0, SERIES[2], "-", "padj < 0.05, |log2FC| > 1"),
+             ("soft", 0.0, SERIES[1], "--", "padj < 0.05, soft loss (no nominal support left)")]
+    for ax, (scope, model, ptitle) in zip(axes, panels):
+        for crit, lfc, col, ls, lab in lines:
+            g = (greedy_tabs if crit == "strict" else greedy_soft)[(scope, lfc, model)]
             y = [1.0] + list(g.frac_of_full_union)
-            ax.plot(range(len(y)), y, color=SERIES[i], lw=2, marker="o", ms=6,
-                    markeredgecolor=SURFACE, mew=1.5,
-                    label=("padj only" if not lfc else f"|log2FC| > {lfc:g}") + f" (n = {full})")
-            if lfc == 0.0:
+            ax.plot(range(len(y)), y, color=col, lw=2, ls=ls, marker="o", ms=6,
+                    markeredgecolor=SURFACE, mew=1.5, label=lab)
+            if crit == "strict" and lfc == 0.0:
                 for k, r in enumerate(g.itertuples(), 1):
                     ax.annotate(f"−{tlabel(r.dropped_time_min)}\n({r.unique_genes_lost})",
-                                (k, r.frac_of_full_union), xytext=(0, -26), textcoords="offset points",
+                                (k, r.frac_of_full_union), xytext=(0, -27), textcoords="offset points",
                                 ha="center", fontsize=7, color=INK2)
         ax.set_ylim(0, 1.05)
+        ax.set_xticks(range(len(y)))
         ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1))
         ax.set_xlabel("time points dropped")
-        ax.set_title("All 9 points" if scope == "all" else "Planned points (15, 30, 60, 120 min)")
+        ax.set_title(ptitle)
     axes[0].set_ylabel("share of DE union still detected")
     axes[0].legend(loc="lower left", fontsize=8)
     fig.suptitle(title, x=0.01, ha="left", fontsize=11, fontweight="bold")
@@ -549,12 +627,14 @@ def plot_greedy(fname, title):
 
 plot_greedy("fig4d_greedy_redundancy.png",
             "4d/4e  Greedy removal of the least-informative time point "
-            "(labels: point dropped, genes lost, padj-only call)")
+            "(labels on blue line: point dropped, genes only it detected)")
 
-for key in [("all", 0.0, "all samples"), ("planned", 0.0, "all samples")]:
-    print(f"  greedy {key}:")
-    print(greedy_tabs[key][["step", "dropped_time_min", "unique_genes_lost", "union_remaining"]]
-          .to_string(index=False))
+for key in [("all", 0.0, "all samples"), ("planned", 0.0, "all samples"),
+            ("planned_alt", 0.0, "without 10/15")]:
+    for crit, tabs in [("strict", greedy_tabs), ("soft", greedy_soft)]:
+        print(f"  greedy {crit} {key}:")
+        print(tabs[key][["step", "dropped_time_min", "unique_genes_lost", "union_remaining"]]
+              .to_string(index=False))
 
 
 # =============================================================================
@@ -609,7 +689,11 @@ def ancestors(t):
     return anc_cache[t]
 
 
-slim = pd.read_csv(os.path.join(DATA, "ATH_GO_GOSLIM.txt.gz"), sep="\t", header=None, comment="!",
+# The mirrored file is a zip archive despite its .gz name; let pandas sniff it.
+_slim_path = os.path.join(DATA, "ATH_GO_GOSLIM.txt.gz")
+with open(_slim_path, "rb") as fh:
+    _comp = "zip" if fh.read(2) == b"PK" else "gzip"
+slim = pd.read_csv(_slim_path, compression=_comp, sep="\t", header=None, comment="!",
                    usecols=[0, 3, 5, 7, 9], names=["gene", "relation", "go", "aspect", "evidence"],
                    dtype=str)
 slim = slim[(slim.aspect == "P") & ~slim.relation.str.startswith("NOT", na=False)]
@@ -650,24 +734,27 @@ def enrich(genes, label):
     return df.sort_values("pvalue")
 
 
-S_all = de_sets(de_main, 0.0, TIMES)
-union_all = set().union(*S_all.values())
-first_time = {}
-for t in TIMES:
-    for g in S_all[t]:
-        first_time.setdefault(g, t)
-clusters = {
-    "early (first DE at 5-20 min)": {g for g, t in first_time.items() if t <= 20},
-    "middle (first DE at 30-45 min)": {g for g, t in first_time.items() if 30 <= t <= 45},
-    "late (first DE at 60-120 min)": {g for g, t in first_time.items() if t >= 60},
-}
-unique_sets = {f"unique to {tlabel(t)}": S_all[t] - set().union(*(S_all[o] for o in TIMES if o != t))
-               for t in TIMES}
-go_frames = []
-for label, genes in list(clusters.items()) + list(unique_sets.items()) + [("all DE genes (union)", union_all)]:
-    e = enrich(genes, label)
-    if not e.empty:
-        go_frames.append(e)
+go_frames, clusters, unique_sets = [], {}, {}
+for call, lfc in [("", 0.0), ("[|log2FC|>1] ", 1.0)]:
+    S_all = de_sets(de_main, lfc, TIMES)
+    union_all = set().union(*S_all.values())
+    first_time = {}
+    for t in TIMES:
+        for g in S_all[t]:
+            first_time.setdefault(g, t)
+    cl = {
+        f"{call}early (first DE at 5-20 min)": {g for g, t in first_time.items() if t <= 20},
+        f"{call}middle (first DE at 30-45 min)": {g for g, t in first_time.items() if 30 <= t <= 45},
+        f"{call}late (first DE at 60-120 min)": {g for g, t in first_time.items() if t >= 60},
+    }
+    un = {f"{call}unique to {tlabel(t)}": S_all[t] - set().union(*(S_all[o] for o in TIMES if o != t))
+          for t in TIMES}
+    clusters.update(cl)
+    unique_sets.update(un)
+    for label, genes in list(cl.items()) + list(un.items()) + [(f"{call}all DE genes (union)", union_all)]:
+        e = enrich(genes, label)
+        if not e.empty:
+            go_frames.append(e)
 go = pd.concat(go_frames, ignore_index=True)
 go.to_csv(os.path.join(OUT, "go_bp_enrichment.csv"), index=False, float_format="%.4g")
 RESULTS["cluster_sizes"] = {k: len(v) for k, v in clusters.items()}
@@ -707,7 +794,7 @@ for label in list(clusters) + list(unique_sets):
                                fold=round(float(best.fold), 2), padj=float(best.padj)))
 theme_tab = pd.DataFrame(theme_rows)
 theme_tab.to_csv(os.path.join(OUT, "go_theme_check.csv"), index=False, float_format="%.3g")
-print(theme_tab[theme_tab.set.str.startswith(("early", "middle", "late"))].to_string(index=False))
+print(theme_tab[theme_tab.set.str.contains("early|middle|late")].to_string(index=False))
 
 # Marker genes: when are they first called?
 markers = {"AT1G08090": "NRT2.1", "AT1G12110": "NRT1.1/NPF6.3", "AT1G77760": "NIA1",

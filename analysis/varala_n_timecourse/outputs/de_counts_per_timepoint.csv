@@ -1,0 +1,49 @@
+model,lfc_threshold,time_min,up,down,total
+all samples,0.0,5,655,413,1068
+all samples,0.0,10,1997,2536,4533
+all samples,0.0,15,2540,3374,5914
+all samples,0.0,20,725,303,1028
+all samples,0.0,30,867,549,1416
+all samples,0.0,45,2260,1881,4141
+all samples,0.0,60,3559,2901,6460
+all samples,0.0,90,2129,1951,4080
+all samples,0.0,120,4407,4339,8746
+all samples,0.5,5,402,253,655
+all samples,0.5,10,1449,1661,3110
+all samples,0.5,15,1613,2711,4324
+all samples,0.5,20,656,274,930
+all samples,0.5,30,775,485,1260
+all samples,0.5,45,1664,1437,3101
+all samples,0.5,60,2547,2122,4669
+all samples,0.5,90,1588,1503,3091
+all samples,0.5,120,3328,3099,6427
+all samples,1.0,5,64,16,80
+all samples,1.0,10,380,367,747
+all samples,1.0,15,551,924,1475
+all samples,1.0,20,431,91,522
+all samples,1.0,30,463,166,629
+all samples,1.0,45,672,400,1072
+all samples,1.0,60,924,813,1737
+all samples,1.0,90,759,567,1326
+all samples,1.0,120,1272,1213,2485
+without 10/15 min samples,0.0,5,845,668,1513
+without 10/15 min samples,0.0,20,817,364,1181
+without 10/15 min samples,0.0,30,945,665,1610
+without 10/15 min samples,0.0,45,2459,2265,4724
+without 10/15 min samples,0.0,60,3803,3429,7232
+without 10/15 min samples,0.0,90,2344,2226,4570
+without 10/15 min samples,0.0,120,4646,4841,9487
+without 10/15 min samples,0.5,5,427,331,758
+without 10/15 min samples,0.5,20,679,303,982
+without 10/15 min samples,0.5,30,784,538,1322
+without 10/15 min samples,0.5,45,1637,1546,3183
+without 10/15 min samples,0.5,60,2491,2311,4802
+without 10/15 min samples,0.5,90,1634,1547,3181
+without 10/15 min samples,0.5,120,3288,3259,6547
+without 10/15 min samples,1.0,5,73,22,95
+without 10/15 min samples,1.0,20,436,91,527
+without 10/15 min samples,1.0,30,461,175,636
+without 10/15 min samples,1.0,45,654,423,1077
+without 10/15 min samples,1.0,60,904,865,1769
+without 10/15 min samples,1.0,90,778,572,1350
+without 10/15 min samples,1.0,120,1276,1253,2529

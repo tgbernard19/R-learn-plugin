@@ -1,0 +1,3487 @@
+{
+ "geo_columns_matched": 57,
+ "times": [
+  5,
+  10,
+  15,
+  20,
+  30,
+  45,
+  60,
+  90,
+  120
+ ],
+ "cells": {
+  "KCl": {
+   "0": 0,
+   "5": 3,
+   "10": 3,
+   "15": 3,
+   "20": 3,
+   "30": 3,
+   "45": 3,
+   "60": 3,
+   "90": 3,
+   "120": 3
+  },
+  "N": {
+   "0": 0,
+   "5": 3,
+   "10": 3,
+   "15": 3,
+   "20": 3,
+   "30": 3,
+   "45": 3,
+   "60": 3,
+   "90": 3,
+   "120": 3
+  },
+  "T0": {
+   "0": 3,
+   "5": 0,
+   "10": 0,
+   "15": 0,
+   "20": 0,
+   "30": 0,
+   "45": 0,
+   "60": 0,
+   "90": 0,
+   "120": 0
+  }
+ },
+ "n_genes_in_table": 28717,
+ "n_genes_filtered": 22528,
+ "pca_var_explained": [
+  0.743,
+  0.056,
+  0.053
+ ],
+ "pc1_mean_10_15": 123.6,
+ "pc1_mean_other": -33.0,
+ "n_genes_2fold_shift_10_15": 5848,
+ "n_genes_expressed_for_shift": 16035,
+ "chloroplast_read_frac_10_15": 0.00021960565157014365,
+ "chloroplast_read_frac_other": 0.001419013440534032,
+ "spline_grid": [
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 3,
+   "FDR": 0.01,
+   "n_genes": 1757,
+   "n_genes_max_abs_log2diff_gt1": 1680,
+   "prior_df": 6.8
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 3,
+   "FDR": 0.05,
+   "n_genes": 3242,
+   "n_genes_max_abs_log2diff_gt1": 2784,
+   "prior_df": 6.8
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 4,
+   "FDR": 0.01,
+   "n_genes": 5098,
+   "n_genes_max_abs_log2diff_gt1": 3845,
+   "prior_df": 6.2
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 4,
+   "FDR": 0.05,
+   "n_genes": 9838,
+   "n_genes_max_abs_log2diff_gt1": 6104,
+   "prior_df": 6.2
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 5,
+   "FDR": 0.01,
+   "n_genes": 4455,
+   "n_genes_max_abs_log2diff_gt1": 3662,
+   "prior_df": 5.7
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "linear",
+   "spline_df": 5,
+   "FDR": 0.05,
+   "n_genes": 9227,
+   "n_genes_max_abs_log2diff_gt1": 6088,
+   "prior_df": 5.7
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 3,
+   "FDR": 0.01,
+   "n_genes": 3470,
+   "n_genes_max_abs_log2diff_gt1": 2437,
+   "prior_df": 5.4
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 3,
+   "FDR": 0.05,
+   "n_genes": 7213,
+   "n_genes_max_abs_log2diff_gt1": 3581,
+   "prior_df": 5.4
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 4,
+   "FDR": 0.01,
+   "n_genes": 2905,
+   "n_genes_max_abs_log2diff_gt1": 2339,
+   "prior_df": 6.0
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 4,
+   "FDR": 0.05,
+   "n_genes": 5781,
+   "n_genes_max_abs_log2diff_gt1": 3578,
+   "prior_df": 6.0
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 5,
+   "FDR": 0.01,
+   "n_genes": 5268,
+   "n_genes_max_abs_log2diff_gt1": 3715,
+   "prior_df": 7.8
+  },
+  {
+   "samples": "all 57 samples",
+   "time_scale": "log",
+   "spline_df": 5,
+   "FDR": 0.05,
+   "n_genes": 10002,
+   "n_genes_max_abs_log2diff_gt1": 5878,
+   "prior_df": 7.8
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 3,
+   "FDR": 0.01,
+   "n_genes": 3355,
+   "n_genes_max_abs_log2diff_gt1": 3163,
+   "prior_df": 45.8
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 3,
+   "FDR": 0.05,
+   "n_genes": 6056,
+   "n_genes_max_abs_log2diff_gt1": 5259,
+   "prior_df": 45.8
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 4,
+   "FDR": 0.01,
+   "n_genes": 4940,
+   "n_genes_max_abs_log2diff_gt1": 4665,
+   "prior_df": 38.4
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 4,
+   "FDR": 0.05,
+   "n_genes": 9059,
+   "n_genes_max_abs_log2diff_gt1": 7624,
+   "prior_df": 38.4
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 5,
+   "FDR": 0.01,
+   "n_genes": 7433,
+   "n_genes_max_abs_log2diff_gt1": 6741,
+   "prior_df": 26.8
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "linear",
+   "spline_df": 5,
+   "FDR": 0.05,
+   "n_genes": 13988,
+   "n_genes_max_abs_log2diff_gt1": 9135,
+   "prior_df": 26.8
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 3,
+   "FDR": 0.01,
+   "n_genes": 4499,
+   "n_genes_max_abs_log2diff_gt1": 3514,
+   "prior_df": 25.4
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 3,
+   "FDR": 0.05,
+   "n_genes": 8345,
+   "n_genes_max_abs_log2diff_gt1": 4323,
+   "prior_df": 25.4
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 4,
+   "FDR": 0.01,
+   "n_genes": 4560,
+   "n_genes_max_abs_log2diff_gt1": 3897,
+   "prior_df": 24.1
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 4,
+   "FDR": 0.05,
+   "n_genes": 8905,
+   "n_genes_max_abs_log2diff_gt1": 5911,
+   "prior_df": 24.1
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 5,
+   "FDR": 0.01,
+   "n_genes": 5303,
+   "n_genes_max_abs_log2diff_gt1": 4790,
+   "prior_df": 27.5
+  },
+  {
+   "samples": "without 10/15 min",
+   "time_scale": "log",
+   "spline_df": 5,
+   "FDR": 0.05,
+   "n_genes": 10461,
+   "n_genes_max_abs_log2diff_gt1": 7783,
+   "prior_df": 27.5
+  }
+ ],
+ "de_counts": [
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 5,
+   "up": 655,
+   "down": 413,
+   "total": 1068
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 10,
+   "up": 1997,
+   "down": 2536,
+   "total": 4533
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 15,
+   "up": 2540,
+   "down": 3374,
+   "total": 5914
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 20,
+   "up": 725,
+   "down": 303,
+   "total": 1028
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 30,
+   "up": 867,
+   "down": 549,
+   "total": 1416
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 45,
+   "up": 2260,
+   "down": 1881,
+   "total": 4141
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 60,
+   "up": 3559,
+   "down": 2901,
+   "total": 6460
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 90,
+   "up": 2129,
+   "down": 1951,
+   "total": 4080
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.0,
+   "time_min": 120,
+   "up": 4407,
+   "down": 4339,
+   "total": 8746
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 5,
+   "up": 402,
+   "down": 253,
+   "total": 655
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 10,
+   "up": 1449,
+   "down": 1661,
+   "total": 3110
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 15,
+   "up": 1613,
+   "down": 2711,
+   "total": 4324
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 20,
+   "up": 656,
+   "down": 274,
+   "total": 930
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 30,
+   "up": 775,
+   "down": 485,
+   "total": 1260
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 45,
+   "up": 1664,
+   "down": 1437,
+   "total": 3101
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 60,
+   "up": 2547,
+   "down": 2122,
+   "total": 4669
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 90,
+   "up": 1588,
+   "down": 1503,
+   "total": 3091
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 0.5,
+   "time_min": 120,
+   "up": 3328,
+   "down": 3099,
+   "total": 6427
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 5,
+   "up": 64,
+   "down": 16,
+   "total": 80
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 10,
+   "up": 380,
+   "down": 367,
+   "total": 747
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 15,
+   "up": 551,
+   "down": 924,
+   "total": 1475
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 20,
+   "up": 431,
+   "down": 91,
+   "total": 522
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 30,
+   "up": 463,
+   "down": 166,
+   "total": 629
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 45,
+   "up": 672,
+   "down": 400,
+   "total": 1072
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 60,
+   "up": 924,
+   "down": 813,
+   "total": 1737
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 90,
+   "up": 759,
+   "down": 567,
+   "total": 1326
+  },
+  {
+   "model": "all samples",
+   "lfc_threshold": 1.0,
+   "time_min": 120,
+   "up": 1272,
+   "down": 1213,
+   "total": 2485
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 5,
+   "up": 845,
+   "down": 668,
+   "total": 1513
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 20,
+   "up": 817,
+   "down": 364,
+   "total": 1181
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 30,
+   "up": 945,
+   "down": 665,
+   "total": 1610
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 45,
+   "up": 2459,
+   "down": 2265,
+   "total": 4724
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 60,
+   "up": 3803,
+   "down": 3429,
+   "total": 7232
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 90,
+   "up": 2344,
+   "down": 2226,
+   "total": 4570
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.0,
+   "time_min": 120,
+   "up": 4646,
+   "down": 4841,
+   "total": 9487
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 5,
+   "up": 427,
+   "down": 331,
+   "total": 758
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 20,
+   "up": 679,
+   "down": 303,
+   "total": 982
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 30,
+   "up": 784,
+   "down": 538,
+   "total": 1322
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 45,
+   "up": 1637,
+   "down": 1546,
+   "total": 3183
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 60,
+   "up": 2491,
+   "down": 2311,
+   "total": 4802
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 90,
+   "up": 1634,
+   "down": 1547,
+   "total": 3181
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 0.5,
+   "time_min": 120,
+   "up": 3288,
+   "down": 3259,
+   "total": 6547
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 5,
+   "up": 73,
+   "down": 22,
+   "total": 95
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 20,
+   "up": 436,
+   "down": 91,
+   "total": 527
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 30,
+   "up": 461,
+   "down": 175,
+   "total": 636
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 45,
+   "up": 654,
+   "down": 423,
+   "total": 1077
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 60,
+   "up": 904,
+   "down": 865,
+   "total": 1769
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 90,
+   "up": 778,
+   "down": 572,
+   "total": 1350
+  },
+  {
+   "model": "without 10/15 min samples",
+   "lfc_threshold": 1.0,
+   "time_min": 120,
+   "up": 1276,
+   "down": 1253,
+   "total": 2529
+  }
+ ],
+ "lfc_corr": {
+  "5": {
+   "5": 1.0,
+   "10": -0.222,
+   "15": -0.317,
+   "20": -0.249,
+   "30": -0.166,
+   "45": -0.331,
+   "60": -0.27,
+   "90": -0.077,
+   "120": -0.325
+  },
+  "10": {
+   "5": -0.222,
+   "10": 1.0,
+   "15": 0.563,
+   "20": 0.454,
+   "30": 0.271,
+   "45": 0.367,
+   "60": 0.371,
+   "90": 0.223,
+   "120": 0.317
+  },
+  "15": {
+   "5": -0.317,
+   "10": 0.563,
+   "15": 1.0,
+   "20": 0.563,
+   "30": 0.348,
+   "45": 0.563,
+   "60": 0.53,
+   "90": 0.355,
+   "120": 0.485
+  },
+  "20": {
+   "5": -0.249,
+   "10": 0.454,
+   "15": 0.563,
+   "20": 1.0,
+   "30": 0.505,
+   "45": 0.7,
+   "60": 0.722,
+   "90": 0.52,
+   "120": 0.65
+  },
+  "30": {
+   "5": -0.166,
+   "10": 0.271,
+   "15": 0.348,
+   "20": 0.505,
+   "30": 1.0,
+   "45": 0.646,
+   "60": 0.559,
+   "90": 0.433,
+   "120": 0.505
+  },
+  "45": {
+   "5": -0.331,
+   "10": 0.367,
+   "15": 0.563,
+   "20": 0.7,
+   "30": 0.646,
+   "45": 1.0,
+   "60": 0.824,
+   "90": 0.607,
+   "120": 0.783
+  },
+  "60": {
+   "5": -0.27,
+   "10": 0.371,
+   "15": 0.53,
+   "20": 0.722,
+   "30": 0.559,
+   "45": 0.824,
+   "60": 1.0,
+   "90": 0.654,
+   "120": 0.801
+  },
+  "90": {
+   "5": -0.077,
+   "10": 0.223,
+   "15": 0.355,
+   "20": 0.52,
+   "30": 0.433,
+   "45": 0.607,
+   "60": 0.654,
+   "90": 1.0,
+   "120": 0.714
+  },
+  "120": {
+   "5": -0.325,
+   "10": 0.317,
+   "15": 0.485,
+   "20": 0.65,
+   "30": 0.505,
+   "45": 0.783,
+   "60": 0.801,
+   "90": 0.714,
+   "120": 1.0
+  }
+ },
+ "lfc_diag": [
+  {
+   "time_min": 5,
+   "n_de": 1068,
+   "median_rho_with_other_points_on_own_DE_genes": -0.322,
+   "min_rho": -0.488,
+   "max_rho": -0.007,
+   "rho_lfc_vs_log_baseMean": 0.21
+  },
+  {
+   "time_min": 10,
+   "n_de": 4533,
+   "median_rho_with_other_points_on_own_DE_genes": 0.477,
+   "min_rho": -0.24,
+   "max_rho": 0.784,
+   "rho_lfc_vs_log_baseMean": -0.083
+  },
+  {
+   "time_min": 15,
+   "n_de": 5914,
+   "median_rho_with_other_points_on_own_DE_genes": 0.658,
+   "min_rho": -0.388,
+   "max_rho": 0.754,
+   "rho_lfc_vs_log_baseMean": -0.076
+  },
+  {
+   "time_min": 20,
+   "n_de": 1028,
+   "median_rho_with_other_points_on_own_DE_genes": 0.796,
+   "min_rho": -0.02,
+   "max_rho": 0.869,
+   "rho_lfc_vs_log_baseMean": -0.061
+  },
+  {
+   "time_min": 30,
+   "n_de": 1416,
+   "median_rho_with_other_points_on_own_DE_genes": 0.81,
+   "min_rho": 0.246,
+   "max_rho": 0.926,
+   "rho_lfc_vs_log_baseMean": -0.076
+  },
+  {
+   "time_min": 45,
+   "n_de": 4141,
+   "median_rho_with_other_points_on_own_DE_genes": 0.841,
+   "min_rho": -0.312,
+   "max_rho": 0.916,
+   "rho_lfc_vs_log_baseMean": -0.133
+  },
+  {
+   "time_min": 60,
+   "n_de": 6460,
+   "median_rho_with_other_points_on_own_DE_genes": 0.739,
+   "min_rho": -0.266,
+   "max_rho": 0.885,
+   "rho_lfc_vs_log_baseMean": 0.019
+  },
+  {
+   "time_min": 90,
+   "n_de": 4080,
+   "median_rho_with_other_points_on_own_DE_genes": 0.72,
+   "min_rho": 0.035,
+   "max_rho": 0.916,
+   "rho_lfc_vs_log_baseMean": -0.026
+  },
+  {
+   "time_min": 120,
+   "n_de": 8746,
+   "median_rho_with_other_points_on_own_DE_genes": 0.66,
+   "min_rho": -0.369,
+   "max_rho": 0.865,
+   "rho_lfc_vs_log_baseMean": -0.13
+  }
+ ],
+ "cumulative": {
+  "all|0.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 1068,
+    "new_genes": 1068,
+    "cumulative_union": 1068,
+    "frac_of_final_union": 0.06906809804048374
+   },
+   {
+    "n_points": 2,
+    "time_min": 10,
+    "set_size": 4533,
+    "new_genes": 4250,
+    "cumulative_union": 5318,
+    "frac_of_final_union": 0.3439177391191877
+   },
+   {
+    "n_points": 3,
+    "time_min": 15,
+    "set_size": 5914,
+    "new_genes": 3590,
+    "cumulative_union": 8908,
+    "frac_of_final_union": 0.5760848477009636
+   },
+   {
+    "n_points": 4,
+    "time_min": 20,
+    "set_size": 1028,
+    "new_genes": 286,
+    "cumulative_union": 9194,
+    "frac_of_final_union": 0.5945806117829658
+   },
+   {
+    "n_points": 5,
+    "time_min": 30,
+    "set_size": 1416,
+    "new_genes": 502,
+    "cumulative_union": 9696,
+    "frac_of_final_union": 0.6270452046821444
+   },
+   {
+    "n_points": 6,
+    "time_min": 45,
+    "set_size": 4141,
+    "new_genes": 1422,
+    "cumulative_union": 11118,
+    "frac_of_final_union": 0.7190066610618897
+   },
+   {
+    "n_points": 7,
+    "time_min": 60,
+    "set_size": 6460,
+    "new_genes": 1839,
+    "cumulative_union": 12957,
+    "frac_of_final_union": 0.8379357175192395
+   },
+   {
+    "n_points": 8,
+    "time_min": 90,
+    "set_size": 4080,
+    "new_genes": 828,
+    "cumulative_union": 13785,
+    "frac_of_final_union": 0.8914828946517493
+   },
+   {
+    "n_points": 9,
+    "time_min": 120,
+    "set_size": 8746,
+    "new_genes": 1678,
+    "cumulative_union": 15463,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "all|0.0|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 1513,
+    "new_genes": 1513,
+    "cumulative_union": 1513,
+    "frac_of_final_union": 0.1094552557331983
+   },
+   {
+    "n_points": 2,
+    "time_min": 20,
+    "set_size": 1181,
+    "new_genes": 1083,
+    "cumulative_union": 2596,
+    "frac_of_final_union": 0.18780293713376256
+   },
+   {
+    "n_points": 3,
+    "time_min": 30,
+    "set_size": 1610,
+    "new_genes": 935,
+    "cumulative_union": 3531,
+    "frac_of_final_union": 0.25544382550821093
+   },
+   {
+    "n_points": 4,
+    "time_min": 45,
+    "set_size": 4724,
+    "new_genes": 3120,
+    "cumulative_union": 6651,
+    "frac_of_final_union": 0.48115459741011357
+   },
+   {
+    "n_points": 5,
+    "time_min": 60,
+    "set_size": 7232,
+    "new_genes": 3217,
+    "cumulative_union": 9868,
+    "frac_of_final_union": 0.7138826593358895
+   },
+   {
+    "n_points": 6,
+    "time_min": 90,
+    "set_size": 4570,
+    "new_genes": 1341,
+    "cumulative_union": 11209,
+    "frac_of_final_union": 0.8108948853360342
+   },
+   {
+    "n_points": 7,
+    "time_min": 120,
+    "set_size": 9487,
+    "new_genes": 2614,
+    "cumulative_union": 13823,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "all|0.5|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 655,
+    "new_genes": 655,
+    "cumulative_union": 655,
+    "frac_of_final_union": 0.054091997687670326
+   },
+   {
+    "n_points": 2,
+    "time_min": 10,
+    "set_size": 3110,
+    "new_genes": 2971,
+    "cumulative_union": 3626,
+    "frac_of_final_union": 0.2994466925427368
+   },
+   {
+    "n_points": 3,
+    "time_min": 15,
+    "set_size": 4324,
+    "new_genes": 2803,
+    "cumulative_union": 6429,
+    "frac_of_final_union": 0.5309274093649352
+   },
+   {
+    "n_points": 4,
+    "time_min": 20,
+    "set_size": 930,
+    "new_genes": 283,
+    "cumulative_union": 6712,
+    "frac_of_final_union": 0.5542984556941118
+   },
+   {
+    "n_points": 5,
+    "time_min": 30,
+    "set_size": 1260,
+    "new_genes": 478,
+    "cumulative_union": 7190,
+    "frac_of_final_union": 0.5937732265257246
+   },
+   {
+    "n_points": 6,
+    "time_min": 45,
+    "set_size": 3101,
+    "new_genes": 1103,
+    "cumulative_union": 8293,
+    "frac_of_final_union": 0.68486249896771
+   },
+   {
+    "n_points": 7,
+    "time_min": 60,
+    "set_size": 4669,
+    "new_genes": 1514,
+    "cumulative_union": 9807,
+    "frac_of_final_union": 0.8098934676686762
+   },
+   {
+    "n_points": 8,
+    "time_min": 90,
+    "set_size": 3091,
+    "new_genes": 758,
+    "cumulative_union": 10565,
+    "frac_of_final_union": 0.872491535221736
+   },
+   {
+    "n_points": 9,
+    "time_min": 120,
+    "set_size": 6427,
+    "new_genes": 1544,
+    "cumulative_union": 12109,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "all|0.5|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 758,
+    "new_genes": 758,
+    "cumulative_union": 758,
+    "frac_of_final_union": 0.0776321179844326
+   },
+   {
+    "n_points": 2,
+    "time_min": 20,
+    "set_size": 982,
+    "new_genes": 910,
+    "cumulative_union": 1668,
+    "frac_of_final_union": 0.17083162638263008
+   },
+   {
+    "n_points": 3,
+    "time_min": 30,
+    "set_size": 1322,
+    "new_genes": 771,
+    "cumulative_union": 2439,
+    "frac_of_final_union": 0.24979516591560835
+   },
+   {
+    "n_points": 4,
+    "time_min": 45,
+    "set_size": 3183,
+    "new_genes": 1947,
+    "cumulative_union": 4386,
+    "frac_of_final_union": 0.4492011470708726
+   },
+   {
+    "n_points": 5,
+    "time_min": 60,
+    "set_size": 4802,
+    "new_genes": 2249,
+    "cumulative_union": 6635,
+    "frac_of_final_union": 0.6795370749692748
+   },
+   {
+    "n_points": 6,
+    "time_min": 90,
+    "set_size": 3181,
+    "new_genes": 1026,
+    "cumulative_union": 7661,
+    "frac_of_final_union": 0.7846169602621876
+   },
+   {
+    "n_points": 7,
+    "time_min": 120,
+    "set_size": 6547,
+    "new_genes": 2103,
+    "cumulative_union": 9764,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "all|1.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 80,
+    "new_genes": 80,
+    "cumulative_union": 80,
+    "frac_of_final_union": 0.016240357287860333
+   },
+   {
+    "n_points": 2,
+    "time_min": 10,
+    "set_size": 747,
+    "new_genes": 724,
+    "cumulative_union": 804,
+    "frac_of_final_union": 0.16321559074299635
+   },
+   {
+    "n_points": 3,
+    "time_min": 15,
+    "set_size": 1475,
+    "new_genes": 1164,
+    "cumulative_union": 1968,
+    "frac_of_final_union": 0.3995127892813642
+   },
+   {
+    "n_points": 4,
+    "time_min": 20,
+    "set_size": 522,
+    "new_genes": 204,
+    "cumulative_union": 2172,
+    "frac_of_final_union": 0.440925700365408
+   },
+   {
+    "n_points": 5,
+    "time_min": 30,
+    "set_size": 629,
+    "new_genes": 302,
+    "cumulative_union": 2474,
+    "frac_of_final_union": 0.5022330491270808
+   },
+   {
+    "n_points": 6,
+    "time_min": 45,
+    "set_size": 1072,
+    "new_genes": 402,
+    "cumulative_union": 2876,
+    "frac_of_final_union": 0.583840844498579
+   },
+   {
+    "n_points": 7,
+    "time_min": 60,
+    "set_size": 1737,
+    "new_genes": 736,
+    "cumulative_union": 3612,
+    "frac_of_final_union": 0.7332521315468941
+   },
+   {
+    "n_points": 8,
+    "time_min": 90,
+    "set_size": 1326,
+    "new_genes": 430,
+    "cumulative_union": 4042,
+    "frac_of_final_union": 0.8205440519691434
+   },
+   {
+    "n_points": 9,
+    "time_min": 120,
+    "set_size": 2485,
+    "new_genes": 884,
+    "cumulative_union": 4926,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "all|1.0|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 5,
+    "set_size": 95,
+    "new_genes": 95,
+    "cumulative_union": 95,
+    "frac_of_final_union": 0.02395964691046658
+   },
+   {
+    "n_points": 2,
+    "time_min": 20,
+    "set_size": 527,
+    "new_genes": 510,
+    "cumulative_union": 605,
+    "frac_of_final_union": 0.15258511979823455
+   },
+   {
+    "n_points": 3,
+    "time_min": 30,
+    "set_size": 636,
+    "new_genes": 380,
+    "cumulative_union": 985,
+    "frac_of_final_union": 0.2484237074401009
+   },
+   {
+    "n_points": 4,
+    "time_min": 45,
+    "set_size": 1077,
+    "new_genes": 551,
+    "cumulative_union": 1536,
+    "frac_of_final_union": 0.38738965952080706
+   },
+   {
+    "n_points": 5,
+    "time_min": 60,
+    "set_size": 1769,
+    "new_genes": 909,
+    "cumulative_union": 2445,
+    "frac_of_final_union": 0.6166456494325346
+   },
+   {
+    "n_points": 6,
+    "time_min": 90,
+    "set_size": 1350,
+    "new_genes": 490,
+    "cumulative_union": 2935,
+    "frac_of_final_union": 0.7402269861286255
+   },
+   {
+    "n_points": 7,
+    "time_min": 120,
+    "set_size": 2529,
+    "new_genes": 1030,
+    "cumulative_union": 3965,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned|0.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 15,
+    "set_size": 5914,
+    "new_genes": 5914,
+    "cumulative_union": 5914,
+    "frac_of_final_union": 0.4517607516614468
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1416,
+    "new_genes": 743,
+    "cumulative_union": 6657,
+    "frac_of_final_union": 0.5085173019631808
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 6460,
+    "new_genes": 3473,
+    "cumulative_union": 10130,
+    "frac_of_final_union": 0.7738140707356199
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 8746,
+    "new_genes": 2961,
+    "cumulative_union": 13091,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned|0.5|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 15,
+    "set_size": 4324,
+    "new_genes": 4324,
+    "cumulative_union": 4324,
+    "frac_of_final_union": 0.4296929345125708
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1260,
+    "new_genes": 701,
+    "cumulative_union": 5025,
+    "frac_of_final_union": 0.499354069363013
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 4669,
+    "new_genes": 2589,
+    "cumulative_union": 7614,
+    "frac_of_final_union": 0.7566332107721355
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 6427,
+    "new_genes": 2449,
+    "cumulative_union": 10063,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned|1.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 15,
+    "set_size": 1475,
+    "new_genes": 1475,
+    "cumulative_union": 1475,
+    "frac_of_final_union": 0.35439692455550215
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 629,
+    "new_genes": 392,
+    "cumulative_union": 1867,
+    "frac_of_final_union": 0.448582412301778
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 1737,
+    "new_genes": 1056,
+    "cumulative_union": 2923,
+    "frac_of_final_union": 0.7023065833733781
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 2485,
+    "new_genes": 1239,
+    "cumulative_union": 4162,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|0.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 1028,
+    "new_genes": 1028,
+    "cumulative_union": 1028,
+    "frac_of_final_union": 0.09316657603770165
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1416,
+    "new_genes": 870,
+    "cumulative_union": 1898,
+    "frac_of_final_union": 0.1720137756026826
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 6460,
+    "new_genes": 5183,
+    "cumulative_union": 7081,
+    "frac_of_final_union": 0.6417437012869313
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 8746,
+    "new_genes": 3953,
+    "cumulative_union": 11034,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|0.0|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 1181,
+    "new_genes": 1181,
+    "cumulative_union": 1181,
+    "frac_of_final_union": 0.09803270523781854
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1610,
+    "new_genes": 1000,
+    "cumulative_union": 2181,
+    "frac_of_final_union": 0.18104092305138209
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 7232,
+    "new_genes": 5794,
+    "cumulative_union": 7975,
+    "frac_of_final_union": 0.6619905370631692
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 9487,
+    "new_genes": 4072,
+    "cumulative_union": 12047,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|0.5|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 930,
+    "new_genes": 930,
+    "cumulative_union": 930,
+    "frac_of_final_union": 0.11183261183261184
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1260,
+    "new_genes": 763,
+    "cumulative_union": 1693,
+    "frac_of_final_union": 0.2035834535834536
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 4669,
+    "new_genes": 3576,
+    "cumulative_union": 5269,
+    "frac_of_final_union": 0.6335978835978836
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 6427,
+    "new_genes": 3047,
+    "cumulative_union": 8316,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|0.5|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 982,
+    "new_genes": 982,
+    "cumulative_union": 982,
+    "frac_of_final_union": 0.11528527823432731
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 1322,
+    "new_genes": 802,
+    "cumulative_union": 1784,
+    "frac_of_final_union": 0.20943883540737263
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 4802,
+    "new_genes": 3667,
+    "cumulative_union": 5451,
+    "frac_of_final_union": 0.6399389528058229
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 6547,
+    "new_genes": 3067,
+    "cumulative_union": 8518,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|1.0|all samples": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 522,
+    "new_genes": 522,
+    "cumulative_union": 522,
+    "frac_of_final_union": 0.15008625646923518
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 629,
+    "new_genes": 373,
+    "cumulative_union": 895,
+    "frac_of_final_union": 0.2573317998849914
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 1737,
+    "new_genes": 1208,
+    "cumulative_union": 2103,
+    "frac_of_final_union": 0.6046578493387004
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 2485,
+    "new_genes": 1375,
+    "cumulative_union": 3478,
+    "frac_of_final_union": 1.0
+   }
+  ],
+  "planned_alt|1.0|without 10/15": [
+   {
+    "n_points": 1,
+    "time_min": 20,
+    "set_size": 527,
+    "new_genes": 527,
+    "cumulative_union": 527,
+    "frac_of_final_union": 0.14887005649717514
+   },
+   {
+    "n_points": 2,
+    "time_min": 30,
+    "set_size": 636,
+    "new_genes": 381,
+    "cumulative_union": 908,
+    "frac_of_final_union": 0.25649717514124293
+   },
+   {
+    "n_points": 3,
+    "time_min": 60,
+    "set_size": 1769,
+    "new_genes": 1244,
+    "cumulative_union": 2152,
+    "frac_of_final_union": 0.607909604519774
+   },
+   {
+    "n_points": 4,
+    "time_min": 120,
+    "set_size": 2529,
+    "new_genes": 1388,
+    "cumulative_union": 3540,
+    "frac_of_final_union": 1.0
+   }
+  ]
+ },
+ "greedy": {
+  "all|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 78,
+    "union_remaining": 15385,
+    "frac_of_full_union": 0.9949557007049085,
+    "points_remaining": "5,10,15,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 94,
+    "union_remaining": 15291,
+    "frac_of_full_union": 0.9888766733492854,
+    "points_remaining": "5,10,15,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 263,
+    "union_remaining": 15028,
+    "frac_of_full_union": 0.9718683308542974,
+    "points_remaining": "10,15,45,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 287,
+    "union_remaining": 14741,
+    "frac_of_full_union": 0.953307896268512,
+    "points_remaining": "10,15,60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 475,
+    "union_remaining": 14266,
+    "frac_of_full_union": 0.9225894069714803,
+    "points_remaining": "10,15,60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1104,
+    "union_remaining": 13162,
+    "frac_of_full_union": 0.8511931707948005,
+    "points_remaining": "10,15,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 1544,
+    "union_remaining": 11618,
+    "frac_of_full_union": 0.751341912953502,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2872,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.5656082260880813,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 150,
+    "union_remaining": 13673,
+    "frac_of_full_union": 0.9891485205816393,
+    "points_remaining": "5,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 172,
+    "union_remaining": 13501,
+    "frac_of_full_union": 0.9767054908485857,
+    "points_remaining": "5,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 487,
+    "union_remaining": 13014,
+    "frac_of_full_union": 0.9414743543369746,
+    "points_remaining": "5,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 629,
+    "union_remaining": 12385,
+    "frac_of_full_union": 0.8959704839759821,
+    "points_remaining": "60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 824,
+    "union_remaining": 11561,
+    "frac_of_full_union": 0.8363596903711206,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 2074,
+    "union_remaining": 9487,
+    "frac_of_full_union": 0.6863199016132533,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 78,
+    "union_remaining": 12031,
+    "frac_of_full_union": 0.9935585101990255,
+    "points_remaining": "5,10,15,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 101,
+    "union_remaining": 11930,
+    "frac_of_full_union": 0.9852176067387893,
+    "points_remaining": "5,10,15,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 218,
+    "union_remaining": 11712,
+    "frac_of_full_union": 0.9672144685770914,
+    "points_remaining": "10,15,45,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 271,
+    "union_remaining": 11441,
+    "frac_of_full_union": 0.9448344206788339,
+    "points_remaining": "10,15,60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 445,
+    "union_remaining": 10996,
+    "frac_of_full_union": 0.9080848955322487,
+    "points_remaining": "10,15,60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 971,
+    "union_remaining": 10025,
+    "frac_of_full_union": 0.827896605830374,
+    "points_remaining": "10,15,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 1235,
+    "union_remaining": 8790,
+    "frac_of_full_union": 0.7259063506482781,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2363,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.530762242959782,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.5|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 145,
+    "union_remaining": 9619,
+    "frac_of_full_union": 0.9851495288816059,
+    "points_remaining": "5,20,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 167,
+    "union_remaining": 9452,
+    "frac_of_full_union": 0.9680458828349038,
+    "points_remaining": "5,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 353,
+    "union_remaining": 9099,
+    "frac_of_full_union": 0.9318926669397788,
+    "points_remaining": "45,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 425,
+    "union_remaining": 8674,
+    "frac_of_full_union": 0.8883654240065547,
+    "points_remaining": "60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 624,
+    "union_remaining": 8050,
+    "frac_of_full_union": 0.8244571896763622,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1503,
+    "union_remaining": 6547,
+    "frac_of_full_union": 0.6705243752560426,
+    "points_remaining": "120"
+   }
+  ],
+  "all|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 28,
+    "union_remaining": 4898,
+    "frac_of_full_union": 0.9943158749492489,
+    "points_remaining": "10,15,20,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 75,
+    "union_remaining": 4823,
+    "frac_of_full_union": 0.9790905399918798,
+    "points_remaining": "10,15,30,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 78,
+    "union_remaining": 4745,
+    "frac_of_full_union": 0.963256191636216,
+    "points_remaining": "10,15,45,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 113,
+    "union_remaining": 4632,
+    "frac_of_full_union": 0.9403166869671132,
+    "points_remaining": "10,15,60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 250,
+    "union_remaining": 4382,
+    "frac_of_full_union": 0.8895655704425497,
+    "points_remaining": "10,15,60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 345,
+    "union_remaining": 4037,
+    "frac_of_full_union": 0.819529029638652,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 562,
+    "union_remaining": 3475,
+    "frac_of_full_union": 0.7054405196914332,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 990,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.5044660982541616,
+    "points_remaining": "120"
+   }
+  ],
+  "all|1.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 45,
+    "union_remaining": 3920,
+    "frac_of_full_union": 0.9886506935687264,
+    "points_remaining": "20,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 96,
+    "union_remaining": 3824,
+    "frac_of_full_union": 0.964438839848676,
+    "points_remaining": "20,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 130,
+    "union_remaining": 3694,
+    "frac_of_full_union": 0.9316519546027743,
+    "points_remaining": "45,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 160,
+    "union_remaining": 3534,
+    "frac_of_full_union": 0.8912988650693568,
+    "points_remaining": "60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 293,
+    "union_remaining": 3241,
+    "frac_of_full_union": 0.8174022698612863,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 712,
+    "union_remaining": 2529,
+    "frac_of_full_union": 0.6378310214375789,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 176,
+    "union_remaining": 12915,
+    "frac_of_full_union": 0.9865556489191047,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1297,
+    "union_remaining": 11618,
+    "frac_of_full_union": 0.8874799480559162,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2872,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.668092582690398,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 193,
+    "union_remaining": 9870,
+    "frac_of_full_union": 0.9808208287786943,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1080,
+    "union_remaining": 8790,
+    "frac_of_full_union": 0.8734969690947034,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2363,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.6386763390638974,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 125,
+    "union_remaining": 4037,
+    "frac_of_full_union": 0.9699663623258049,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 562,
+    "union_remaining": 3475,
+    "frac_of_full_union": 0.8349351273426238,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 990,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.5970687169629986,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 170,
+    "union_remaining": 10864,
+    "frac_of_full_union": 0.9845930759470727,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 257,
+    "union_remaining": 10607,
+    "frac_of_full_union": 0.9613014319376473,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1861,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.7926409280406018,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 189,
+    "union_remaining": 11858,
+    "frac_of_full_union": 0.9843114468332365,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 297,
+    "union_remaining": 11561,
+    "frac_of_full_union": 0.9596580061426081,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 2074,
+    "union_remaining": 9487,
+    "frac_of_full_union": 0.7874989623972773,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 168,
+    "union_remaining": 8148,
+    "frac_of_full_union": 0.9797979797979798,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 271,
+    "union_remaining": 7877,
+    "frac_of_full_union": 0.9472101972101972,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1450,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.7728475228475229,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.5|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 182,
+    "union_remaining": 8336,
+    "frac_of_full_union": 0.9786334820380371,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 286,
+    "union_remaining": 8050,
+    "frac_of_full_union": 0.9450575252406668,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1503,
+    "union_remaining": 6547,
+    "frac_of_full_union": 0.7686076543789622,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 130,
+    "union_remaining": 3348,
+    "frac_of_full_union": 0.9626221966647499,
+    "points_remaining": "20,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 159,
+    "union_remaining": 3189,
+    "frac_of_full_union": 0.9169062679700978,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 704,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.7144910868315124,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|1.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 139,
+    "union_remaining": 3401,
+    "frac_of_full_union": 0.9607344632768362,
+    "points_remaining": "20,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 160,
+    "union_remaining": 3241,
+    "frac_of_full_union": 0.9155367231638418,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 712,
+    "union_remaining": 2529,
+    "frac_of_full_union": 0.714406779661017,
+    "points_remaining": "120"
+   }
+  ]
+ },
+ "greedy_soft": {
+  "all|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 26,
+    "union_remaining": 16949,
+    "frac_of_full_union": 0.9948347713799378,
+    "points_remaining": "5,10,15,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 70,
+    "union_remaining": 16806,
+    "frac_of_full_union": 0.9864412748723367,
+    "points_remaining": "5,10,15,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 150,
+    "union_remaining": 16493,
+    "frac_of_full_union": 0.9680694958032517,
+    "points_remaining": "5,10,15,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 353,
+    "union_remaining": 15904,
+    "frac_of_full_union": 0.933497681516699,
+    "points_remaining": "5,10,15,60,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 761,
+    "union_remaining": 14682,
+    "frac_of_full_union": 0.8617714386335622,
+    "points_remaining": "5,10,15,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 832,
+    "union_remaining": 13807,
+    "frac_of_full_union": 0.8104126313318073,
+    "points_remaining": "10,15,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 1533,
+    "union_remaining": 11889,
+    "frac_of_full_union": 0.6978341257263603,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2774,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.5133532898984563,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 86,
+    "union_remaining": 14426,
+    "frac_of_full_union": 0.9879468565949869,
+    "points_remaining": "5,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 136,
+    "union_remaining": 14190,
+    "frac_of_full_union": 0.9717846870291741,
+    "points_remaining": "5,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 332,
+    "union_remaining": 13648,
+    "frac_of_full_union": 0.9346664840432818,
+    "points_remaining": "5,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 526,
+    "union_remaining": 12845,
+    "frac_of_full_union": 0.8796740172579098,
+    "points_remaining": "5,60,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 1201,
+    "union_remaining": 11611,
+    "frac_of_full_union": 0.7951650458841255,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1705,
+    "union_remaining": 9487,
+    "frac_of_full_union": 0.6497055197918093,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 23,
+    "union_remaining": 12841,
+    "frac_of_full_union": 0.9933472576777288,
+    "points_remaining": "5,10,15,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 55,
+    "union_remaining": 12703,
+    "frac_of_full_union": 0.9826719269745494,
+    "points_remaining": "5,10,15,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 116,
+    "union_remaining": 12418,
+    "frac_of_full_union": 0.960625048348418,
+    "points_remaining": "5,10,15,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 238,
+    "union_remaining": 11908,
+    "frac_of_full_union": 0.9211727392279725,
+    "points_remaining": "5,10,15,60,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 512,
+    "union_remaining": 10887,
+    "frac_of_full_union": 0.8421907635182176,
+    "points_remaining": "5,10,15,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 527,
+    "union_remaining": 10321,
+    "frac_of_full_union": 0.7984064361414095,
+    "points_remaining": "10,15,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 954,
+    "union_remaining": 8916,
+    "frac_of_full_union": 0.689719192388025,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 1916,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.4971764523864779,
+    "points_remaining": "120"
+   }
+  ],
+  "all|0.5|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 73,
+    "union_remaining": 9975,
+    "frac_of_full_union": 0.9817913385826772,
+    "points_remaining": "5,20,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 93,
+    "union_remaining": 9790,
+    "frac_of_full_union": 0.9635826771653543,
+    "points_remaining": "5,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 218,
+    "union_remaining": 9347,
+    "frac_of_full_union": 0.9199803149606299,
+    "points_remaining": "5,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 295,
+    "union_remaining": 8734,
+    "frac_of_full_union": 0.8596456692913386,
+    "points_remaining": "5,60,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 622,
+    "union_remaining": 8079,
+    "frac_of_full_union": 0.7951771653543307,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 990,
+    "union_remaining": 6547,
+    "frac_of_full_union": 0.6443897637795276,
+    "points_remaining": "120"
+   }
+  ],
+  "all|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 15,
+    "union_remaining": 4960,
+    "frac_of_full_union": 0.9843222861678904,
+    "points_remaining": "5,10,15,30,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 19,
+    "union_remaining": 4876,
+    "frac_of_full_union": 0.96765231196666,
+    "points_remaining": "5,10,15,45,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 43,
+    "union_remaining": 4760,
+    "frac_of_full_union": 0.9446318714030562,
+    "points_remaining": "5,10,15,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 55,
+    "union_remaining": 4701,
+    "frac_of_full_union": 0.93292319904743,
+    "points_remaining": "10,15,60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 86,
+    "union_remaining": 4442,
+    "frac_of_full_union": 0.8815241119269697,
+    "points_remaining": "10,15,60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 10,
+    "unique_genes_lost": 196,
+    "union_remaining": 4075,
+    "frac_of_full_union": 0.8086922008334987,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 7,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 309,
+    "union_remaining": 3503,
+    "frac_of_full_union": 0.6951776146060726,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 8,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 684,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.4931534034530661,
+    "points_remaining": "120"
+   }
+  ],
+  "all|1.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 26,
+    "union_remaining": 3920,
+    "frac_of_full_union": 0.9748818701815469,
+    "points_remaining": "5,20,45,60,90,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 45,
+    "unique_genes_lost": 42,
+    "union_remaining": 3780,
+    "frac_of_full_union": 0.9400646605322059,
+    "points_remaining": "5,20,60,90,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 5,
+    "unique_genes_lost": 69,
+    "union_remaining": 3706,
+    "frac_of_full_union": 0.9216612782889828,
+    "points_remaining": "20,60,90,120"
+   },
+   {
+    "step": 4,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 88,
+    "union_remaining": 3545,
+    "frac_of_full_union": 0.8816214871922408,
+    "points_remaining": "60,90,120"
+   },
+   {
+    "step": 5,
+    "dropped_time_min": 90,
+    "unique_genes_lost": 112,
+    "union_remaining": 3250,
+    "frac_of_full_union": 0.8082566525739866,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 6,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 460,
+    "union_remaining": 2529,
+    "frac_of_full_union": 0.6289480228798806,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 171,
+    "union_remaining": 13276,
+    "frac_of_full_union": 0.9829705316155782,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 978,
+    "union_remaining": 11889,
+    "frac_of_full_union": 0.8802754331408263,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 2774,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.6475640456093588,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 143,
+    "union_remaining": 10042,
+    "frac_of_full_union": 0.977323600973236,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 630,
+    "union_remaining": 8916,
+    "frac_of_full_union": 0.8677372262773723,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 1916,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.6254987834549879,
+    "points_remaining": "120"
+   }
+  ],
+  "planned|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 44,
+    "union_remaining": 4075,
+    "frac_of_full_union": 0.9693149381541389,
+    "points_remaining": "15,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 309,
+    "union_remaining": 3503,
+    "frac_of_full_union": 0.8332540437678402,
+    "points_remaining": "15,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 15,
+    "unique_genes_lost": 684,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.5911037107516651,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 119,
+    "union_remaining": 10950,
+    "frac_of_full_union": 0.9832974137931034,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 252,
+    "union_remaining": 10639,
+    "frac_of_full_union": 0.9553699712643678,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1469,
+    "union_remaining": 8746,
+    "frac_of_full_union": 0.7853807471264368,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 137,
+    "union_remaining": 11982,
+    "frac_of_full_union": 0.9827755905511811,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 302,
+    "union_remaining": 11611,
+    "frac_of_full_union": 0.9523458005249343,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 1705,
+    "union_remaining": 9487,
+    "frac_of_full_union": 0.7781332020997376,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.5|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 110,
+    "union_remaining": 8215,
+    "frac_of_full_union": 0.9784421152929966,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 222,
+    "union_remaining": 7901,
+    "frac_of_full_union": 0.9410433539780848,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 937,
+    "union_remaining": 6427,
+    "frac_of_full_union": 0.7654835636017151,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|0.5|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 123,
+    "union_remaining": 8414,
+    "frac_of_full_union": 0.9771222854488445,
+    "points_remaining": "30,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 235,
+    "union_remaining": 8079,
+    "frac_of_full_union": 0.9382185576588085,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 990,
+    "union_remaining": 6547,
+    "frac_of_full_union": 0.7603065846010916,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|1.0|all samples": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 49,
+    "union_remaining": 3361,
+    "frac_of_full_union": 0.9613844393592678,
+    "points_remaining": "20,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 95,
+    "union_remaining": 3195,
+    "frac_of_full_union": 0.9139016018306636,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 439,
+    "union_remaining": 2485,
+    "frac_of_full_union": 0.710812356979405,
+    "points_remaining": "120"
+   }
+  ],
+  "planned_alt|1.0|without 10/15": [
+   {
+    "step": 1,
+    "dropped_time_min": 30,
+    "unique_genes_lost": 48,
+    "union_remaining": 3418,
+    "frac_of_full_union": 0.9595732734418866,
+    "points_remaining": "20,60,120"
+   },
+   {
+    "step": 2,
+    "dropped_time_min": 20,
+    "unique_genes_lost": 99,
+    "union_remaining": 3250,
+    "frac_of_full_union": 0.9124087591240876,
+    "points_remaining": "60,120"
+   },
+   {
+    "step": 3,
+    "dropped_time_min": 60,
+    "unique_genes_lost": 460,
+    "union_remaining": 2529,
+    "frac_of_full_union": 0.709994385176867,
+    "points_remaining": "120"
+   }
+  ]
+ },
+ "go_universe": 17231,
+ "cluster_sizes": {
+  "early (first DE at 5-20 min)": 9194,
+  "middle (first DE at 30-45 min)": 1924,
+  "late (first DE at 60-120 min)": 4345,
+  "[|log2FC|>1] early (first DE at 5-20 min)": 2172,
+  "[|log2FC|>1] middle (first DE at 30-45 min)": 704,
+  "[|log2FC|>1] late (first DE at 60-120 min)": 2050
+ },
+ "unique_sizes": {
+  "unique to 5 min": 261,
+  "unique to 10 min": 1145,
+  "unique to 15 min": 1207,
+  "unique to 20 min": 78,
+  "unique to 30 min": 91,
+  "unique to 45 min": 237,
+  "unique to 1 h": 710,
+  "unique to 1.5 h": 413,
+  "unique to 2 h": 1678,
+  "[|log2FC|>1] unique to 5 min": 28,
+  "[|log2FC|>1] unique to 10 min": 321,
+  "[|log2FC|>1] unique to 15 min": 638,
+  "[|log2FC|>1] unique to 20 min": 75,
+  "[|log2FC|>1] unique to 30 min": 76,
+  "[|log2FC|>1] unique to 45 min": 83,
+  "[|log2FC|>1] unique to 1 h": 357,
+  "[|log2FC|>1] unique to 1.5 h": 220,
+  "[|log2FC|>1] unique to 2 h": 884
+ },
+ "top_go": {
+  "early (first DE at 5-20 min)": [
+   {
+    "term": "ribosomal large subunit biogenesis",
+    "overlap": 49,
+    "term_size": 67,
+    "fold": 1.8049,
+    "padj": 0.0001
+   },
+   {
+    "term": "ribonucleoprotein complex biogenesis",
+    "overlap": 230,
+    "term_size": 443,
+    "fold": 1.2813,
+    "padj": 0.0006
+   },
+   {
+    "term": "protein transport",
+    "overlap": 225,
+    "term_size": 437,
+    "fold": 1.2707,
+    "padj": 0.0011
+   },
+   {
+    "term": "nitrogen compound transport",
+    "overlap": 131,
+    "term_size": 236,
+    "fold": 1.3699,
+    "padj": 0.0011
+   },
+   {
+    "term": "cytoplasmic translation",
+    "overlap": 56,
+    "term_size": 86,
+    "fold": 1.607,
+    "padj": 0.0013
+   },
+   {
+    "term": "vesicle-mediated transport",
+    "overlap": 250,
+    "term_size": 497,
+    "fold": 1.2414,
+    "padj": 0.0013
+   },
+   {
+    "term": "protein-RNA complex assembly",
+    "overlap": 71,
+    "term_size": 116,
+    "fold": 1.5105,
+    "padj": 0.0013
+   },
+   {
+    "term": "protein-RNA complex organization",
+    "overlap": 72,
+    "term_size": 118,
+    "fold": 1.5058,
+    "padj": 0.0013
+   },
+   {
+    "term": "establishment of protein localization to organelle",
+    "overlap": 138,
+    "term_size": 255,
+    "fold": 1.3356,
+    "padj": 0.0016
+   },
+   {
+    "term": "carbohydrate biosynthetic process",
+    "overlap": 163,
+    "term_size": 311,
+    "fold": 1.2935,
+    "padj": 0.0024
+   },
+   {
+    "term": "ribosome biogenesis",
+    "overlap": 189,
+    "term_size": 368,
+    "fold": 1.2675,
+    "padj": 0.0024
+   },
+   {
+    "term": "protein localization to organelle",
+    "overlap": 140,
+    "term_size": 262,
+    "fold": 1.3187,
+    "padj": 0.0024
+   }
+  ],
+  "middle (first DE at 30-45 min)": [
+   {
+    "term": "immune effector process",
+    "overlap": 9,
+    "term_size": 18,
+    "fold": 5.9499,
+    "padj": 0.0079
+   },
+   {
+    "term": "cellular response to decreased oxygen levels",
+    "overlap": 41,
+    "term_size": 241,
+    "fold": 2.0245,
+    "padj": 0.0079
+   },
+   {
+    "term": "cellular response to oxygen levels",
+    "overlap": 41,
+    "term_size": 242,
+    "fold": 2.0161,
+    "padj": 0.0079
+   },
+   {
+    "term": "cellular response to hypoxia",
+    "overlap": 40,
+    "term_size": 239,
+    "fold": 1.9916,
+    "padj": 0.0099
+   },
+   {
+    "term": "response to bacterium",
+    "overlap": 69,
+    "term_size": 498,
+    "fold": 1.6488,
+    "padj": 0.0099
+   },
+   {
+    "term": "response to decreased oxygen levels",
+    "overlap": 43,
+    "term_size": 273,
+    "fold": 1.8743,
+    "padj": 0.0152
+   },
+   {
+    "term": "response to oxygen levels",
+    "overlap": 43,
+    "term_size": 275,
+    "fold": 1.8607,
+    "padj": 0.0155
+   },
+   {
+    "term": "response to hypoxia",
+    "overlap": 42,
+    "term_size": 269,
+    "fold": 1.858,
+    "padj": 0.017
+   }
+  ],
+  "late (first DE at 60-120 min)": [
+   {
+    "term": "rRNA modification",
+    "overlap": 37,
+    "term_size": 89,
+    "fold": 2.1512,
+    "padj": 0.0023
+   }
+  ],
+  "unique to 5 min": [
+   {
+    "term": "aerobic electron transport chain",
+    "overlap": 6,
+    "term_size": 41,
+    "fold": 12.9313,
+    "padj": 0.0074
+   },
+   {
+    "term": "mitochondrial ATP synthesis coupled electron transport",
+    "overlap": 6,
+    "term_size": 42,
+    "fold": 12.6234,
+    "padj": 0.0074
+   },
+   {
+    "term": "ATP synthesis coupled electron transport",
+    "overlap": 6,
+    "term_size": 49,
+    "fold": 10.8201,
+    "padj": 0.0124
+   },
+   {
+    "term": "respiratory electron transport chain",
+    "overlap": 6,
+    "term_size": 54,
+    "fold": 9.8182,
+    "padj": 0.0163
+   },
+   {
+    "term": "oxidative phosphorylation",
+    "overlap": 6,
+    "term_size": 57,
+    "fold": 9.3015,
+    "padj": 0.0179
+   },
+   {
+    "term": "aerobic respiration",
+    "overlap": 9,
+    "term_size": 170,
+    "fold": 4.6781,
+    "padj": 0.0475
+   }
+  ],
+  "unique to 10 min": [
+   {
+    "term": "protein polyubiquitination",
+    "overlap": 14,
+    "term_size": 62,
+    "fold": 4.4723,
+    "padj": 0.0039
+   },
+   {
+    "term": "ubiquitin-dependent protein catabolic process",
+    "overlap": 39,
+    "term_size": 385,
+    "fold": 2.0063,
+    "padj": 0.0288
+   },
+   {
+    "term": "modification-dependent protein catabolic process",
+    "overlap": 39,
+    "term_size": 394,
+    "fold": 1.9605,
+    "padj": 0.0288
+   },
+   {
+    "term": "modification-dependent macromolecule catabolic process",
+    "overlap": 39,
+    "term_size": 397,
+    "fold": 1.9457,
+    "padj": 0.0288
+   },
+   {
+    "term": "vesicle-mediated transport",
+    "overlap": 45,
+    "term_size": 497,
+    "fold": 1.7933,
+    "padj": 0.0442
+   },
+   {
+    "term": "protein catabolic process",
+    "overlap": 43,
+    "term_size": 471,
+    "fold": 1.8082,
+    "padj": 0.0442
+   },
+   {
+    "term": "protein localization to organelle",
+    "overlap": 28,
+    "term_size": 262,
+    "fold": 2.1166,
+    "padj": 0.0444
+   }
+  ],
+  "unique to 15 min": [],
+  "unique to 20 min": [],
+  "unique to 30 min": [],
+  "unique to 45 min": [],
+  "unique to 1 h": [
+   {
+    "term": "electron transport chain",
+    "overlap": 15,
+    "term_size": 108,
+    "fold": 4.1766,
+    "padj": 0.0058
+   },
+   {
+    "term": "response to jasmonic acid",
+    "overlap": 18,
+    "term_size": 185,
+    "fold": 2.9259,
+    "padj": 0.0423
+   },
+   {
+    "term": "response to fatty acid",
+    "overlap": 18,
+    "term_size": 189,
+    "fold": 2.864,
+    "padj": 0.0423
+   }
+  ],
+  "unique to 1.5 h": [],
+  "unique to 2 h": [
+   {
+    "term": "vesicle-mediated transport",
+    "overlap": 63,
+    "term_size": 497,
+    "fold": 1.7104,
+    "padj": 0.0333
+   },
+   {
+    "term": "endomembrane system organization",
+    "overlap": 22,
+    "term_size": 115,
+    "fold": 2.5813,
+    "padj": 0.0333
+   },
+   {
+    "term": "endosome transport via multivesicular body sorting pathway",
+    "overlap": 11,
+    "term_size": 37,
+    "fold": 4.0115,
+    "padj": 0.0337
+   },
+   {
+    "term": "multivesicular body sorting pathway",
+    "overlap": 11,
+    "term_size": 38,
+    "fold": 3.906,
+    "padj": 0.0337
+   },
+   {
+    "term": "endosomal transport",
+    "overlap": 17,
+    "term_size": 84,
+    "fold": 2.7308,
+    "padj": 0.0468
+   },
+   {
+    "term": "root hair elongation",
+    "overlap": 16,
+    "term_size": 77,
+    "fold": 2.8038,
+    "padj": 0.0468
+   },
+   {
+    "term": "late endosome to vacuole transport via multivesicular body sorting pathway",
+    "overlap": 9,
+    "term_size": 29,
+    "fold": 4.1876,
+    "padj": 0.0469
+   },
+   {
+    "term": "late endosome to vacuole transport",
+    "overlap": 12,
+    "term_size": 49,
+    "fold": 3.3045,
+    "padj": 0.0469
+   }
+  ],
+  "all DE genes (union)": [
+   {
+    "term": "ribosome biogenesis",
+    "overlap": 310,
+    "term_size": 368,
+    "fold": 1.2343,
+    "padj": 0.0
+   },
+   {
+    "term": "ribonucleoprotein complex biogenesis",
+    "overlap": 366,
+    "term_size": 443,
+    "fold": 1.2105,
+    "padj": 0.0
+   },
+   {
+    "term": "rRNA metabolic process",
+    "overlap": 245,
+    "term_size": 293,
+    "fold": 1.2252,
+    "padj": 0.0
+   },
+   {
+    "term": "ribosomal large subunit biogenesis",
+    "overlap": 65,
+    "term_size": 67,
+    "fold": 1.4215,
+    "padj": 0.0
+   },
+   {
+    "term": "ribosomal small subunit biogenesis",
+    "overlap": 83,
+    "term_size": 89,
+    "fold": 1.3664,
+    "padj": 0.0
+   },
+   {
+    "term": "rRNA processing",
+    "overlap": 233,
+    "term_size": 281,
+    "fold": 1.2149,
+    "padj": 0.0
+   },
+   {
+    "term": "response to salt stress",
+    "overlap": 371,
+    "term_size": 473,
+    "fold": 1.1493,
+    "padj": 0.0001
+   },
+   {
+    "term": "vesicle-mediated transport",
+    "overlap": 386,
+    "term_size": 497,
+    "fold": 1.138,
+    "padj": 0.0004
+   },
+   {
+    "term": "response to oxidative stress",
+    "overlap": 343,
+    "term_size": 439,
+    "fold": 1.1448,
+    "padj": 0.0005
+   },
+   {
+    "term": "maturation of LSU-rRNA",
+    "overlap": 34,
+    "term_size": 34,
+    "fold": 1.4652,
+    "padj": 0.0005
+   },
+   {
+    "term": "Golgi vesicle transport",
+    "overlap": 152,
+    "term_size": 184,
+    "fold": 1.2104,
+    "padj": 0.0013
+   },
+   {
+    "term": "ribosome assembly",
+    "overlap": 43,
+    "term_size": 45,
+    "fold": 1.4001,
+    "padj": 0.0014
+   }
+  ],
+  "[|log2FC|>1] early (first DE at 5-20 min)": [
+   {
+    "term": "cellular response to decreased oxygen levels",
+    "overlap": 45,
+    "term_size": 241,
+    "fold": 1.9511,
+    "padj": 0.0071
+   },
+   {
+    "term": "response to nitrate",
+    "overlap": 12,
+    "term_size": 30,
+    "fold": 4.1797,
+    "padj": 0.0071
+   },
+   {
+    "term": "cellular response to oxygen levels",
+    "overlap": 45,
+    "term_size": 242,
+    "fold": 1.9431,
+    "padj": 0.0071
+   },
+   {
+    "term": "cellular response to hypoxia",
+    "overlap": 44,
+    "term_size": 239,
+    "fold": 1.9237,
+    "padj": 0.0073
+   },
+   {
+    "term": "nitrate transmembrane transport",
+    "overlap": 10,
+    "term_size": 23,
+    "fold": 4.5432,
+    "padj": 0.0073
+   },
+   {
+    "term": "response to decreased oxygen levels",
+    "overlap": 48,
+    "term_size": 273,
+    "fold": 1.8373,
+    "padj": 0.0073
+   },
+   {
+    "term": "response to oxidative stress",
+    "overlap": 69,
+    "term_size": 439,
+    "fold": 1.6424,
+    "padj": 0.0073
+   },
+   {
+    "term": "response to oxygen levels",
+    "overlap": 48,
+    "term_size": 275,
+    "fold": 1.8239,
+    "padj": 0.0077
+   },
+   {
+    "term": "response to hypoxia",
+    "overlap": 47,
+    "term_size": 269,
+    "fold": 1.8257,
+    "padj": 0.0081
+   },
+   {
+    "term": "phytosteroid biosynthetic process",
+    "overlap": 10,
+    "term_size": 26,
+    "fold": 4.019,
+    "padj": 0.0147
+   },
+   {
+    "term": "brassinosteroid biosynthetic process",
+    "overlap": 10,
+    "term_size": 26,
+    "fold": 4.019,
+    "padj": 0.0147
+   },
+   {
+    "term": "brassinosteroid metabolic process",
+    "overlap": 11,
+    "term_size": 32,
+    "fold": 3.592,
+    "padj": 0.0196
+   }
+  ],
+  "[|log2FC|>1] middle (first DE at 30-45 min)": [],
+  "[|log2FC|>1] late (first DE at 60-120 min)": [
+   {
+    "term": "rRNA modification",
+    "overlap": 35,
+    "term_size": 89,
+    "fold": 4.2538,
+    "padj": 0.0
+   },
+   {
+    "term": "cellular response to decreased oxygen levels",
+    "overlap": 62,
+    "term_size": 241,
+    "fold": 2.7827,
+    "padj": 0.0
+   },
+   {
+    "term": "cellular response to oxygen levels",
+    "overlap": 62,
+    "term_size": 242,
+    "fold": 2.7712,
+    "padj": 0.0
+   },
+   {
+    "term": "cellular response to hypoxia",
+    "overlap": 61,
+    "term_size": 239,
+    "fold": 2.7607,
+    "padj": 0.0
+   },
+   {
+    "term": "response to decreased oxygen levels",
+    "overlap": 65,
+    "term_size": 273,
+    "fold": 2.5754,
+    "padj": 0.0
+   },
+   {
+    "term": "response to oxygen levels",
+    "overlap": 65,
+    "term_size": 275,
+    "fold": 2.5567,
+    "padj": 0.0
+   },
+   {
+    "term": "response to hypoxia",
+    "overlap": 64,
+    "term_size": 269,
+    "fold": 2.5735,
+    "padj": 0.0
+   },
+   {
+    "term": "response to nutrient levels",
+    "overlap": 50,
+    "term_size": 269,
+    "fold": 2.0105,
+    "padj": 0.0003
+   },
+   {
+    "term": "response to starvation",
+    "overlap": 40,
+    "term_size": 216,
+    "fold": 2.0031,
+    "padj": 0.0036
+   },
+   {
+    "term": "rRNA processing",
+    "overlap": 48,
+    "term_size": 281,
+    "fold": 1.8477,
+    "padj": 0.0045
+   },
+   {
+    "term": "rRNA metabolic process",
+    "overlap": 49,
+    "term_size": 293,
+    "fold": 1.8089,
+    "padj": 0.006
+   },
+   {
+    "term": "plant-type primary cell wall biogenesis",
+    "overlap": 10,
+    "term_size": 25,
+    "fold": 4.3267,
+    "padj": 0.0067
+   }
+  ],
+  "[|log2FC|>1] unique to 5 min": [
+   {
+    "term": "ATP synthesis coupled electron transport",
+    "overlap": 3,
+    "term_size": 49,
+    "fold": 52.748,
+    "padj": 0.0256
+   },
+   {
+    "term": "respiratory electron transport chain",
+    "overlap": 3,
+    "term_size": 54,
+    "fold": 47.8639,
+    "padj": 0.0256
+   },
+   {
+    "term": "oxidative phosphorylation",
+    "overlap": 3,
+    "term_size": 57,
+    "fold": 45.3447,
+    "padj": 0.0256
+   }
+  ],
+  "[|log2FC|>1] unique to 10 min": [],
+  "[|log2FC|>1] unique to 15 min": [],
+  "[|log2FC|>1] unique to 20 min": [],
+  "[|log2FC|>1] unique to 30 min": [],
+  "[|log2FC|>1] unique to 45 min": [],
+  "[|log2FC|>1] unique to 1 h": [
+   {
+    "term": "regulation of response to stress",
+    "overlap": 22,
+    "term_size": 475,
+    "fold": 2.7145,
+    "padj": 0.0482
+   }
+  ],
+  "[|log2FC|>1] unique to 1.5 h": [],
+  "[|log2FC|>1] unique to 2 h": [
+   {
+    "term": "plant-type primary cell wall biogenesis",
+    "overlap": 8,
+    "term_size": 25,
+    "fold": 8.1446,
+    "padj": 0.0067
+   },
+   {
+    "term": "mitotic cytokinesis",
+    "overlap": 9,
+    "term_size": 38,
+    "fold": 6.0281,
+    "padj": 0.0127
+   },
+   {
+    "term": "cellulose metabolic process",
+    "overlap": 10,
+    "term_size": 57,
+    "fold": 4.4653,
+    "padj": 0.0454
+   }
+  ],
+  "[|log2FC|>1] all DE genes (union)": [
+   {
+    "term": "cellular response to decreased oxygen levels",
+    "overlap": 125,
+    "term_size": 241,
+    "fold": 2.365,
+    "padj": 0.0
+   },
+   {
+    "term": "cellular response to oxygen levels",
+    "overlap": 125,
+    "term_size": 242,
+    "fold": 2.3552,
+    "padj": 0.0
+   },
+   {
+    "term": "cellular response to hypoxia",
+    "overlap": 123,
+    "term_size": 239,
+    "fold": 2.3466,
+    "padj": 0.0
+   },
+   {
+    "term": "response to decreased oxygen levels",
+    "overlap": 132,
+    "term_size": 273,
+    "fold": 2.2047,
+    "padj": 0.0
+   },
+   {
+    "term": "response to hypoxia",
+    "overlap": 130,
+    "term_size": 269,
+    "fold": 2.2036,
+    "padj": 0.0
+   },
+   {
+    "term": "response to oxygen levels",
+    "overlap": 132,
+    "term_size": 275,
+    "fold": 2.1886,
+    "padj": 0.0
+   },
+   {
+    "term": "response to nutrient levels",
+    "overlap": 107,
+    "term_size": 269,
+    "fold": 1.8137,
+    "padj": 0.0
+   },
+   {
+    "term": "phenylpropanoid metabolic process",
+    "overlap": 52,
+    "term_size": 106,
+    "fold": 2.2368,
+    "padj": 0.0
+   },
+   {
+    "term": "secondary metabolic process",
+    "overlap": 77,
+    "term_size": 190,
+    "fold": 1.8479,
+    "padj": 0.0
+   },
+   {
+    "term": "secondary metabolite biosynthetic process",
+    "overlap": 46,
+    "term_size": 98,
+    "fold": 2.1403,
+    "padj": 0.0
+   },
+   {
+    "term": "response to starvation",
+    "overlap": 81,
+    "term_size": 216,
+    "fold": 1.7099,
+    "padj": 0.0
+   },
+   {
+    "term": "phenylpropanoid biosynthetic process",
+    "overlap": 39,
+    "term_size": 81,
+    "fold": 2.1954,
+    "padj": 0.0
+   }
+  ]
+ }
+}

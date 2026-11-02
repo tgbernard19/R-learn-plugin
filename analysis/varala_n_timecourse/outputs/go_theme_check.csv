@@ -1,0 +1,145 @@
+set,theme,best_term,overlap,fold,padj
+early (first DE at 5-20 min),nitrate transport,nitrate import,19,1.42,0.257
+early (first DE at 5-20 min),nitrate assimilation / N reduction,nitrate assimilation,7,1.33,0.581
+early (first DE at 5-20 min),amino acid biosynthesis,amino acid biosynthetic process,64,1.23,0.198
+early (first DE at 5-20 min),response to nitrate,response to nitrate,18,1.48,0.221
+early (first DE at 5-20 min),pentose-phosphate / glycolysis,pentose-phosphate shunt,18,1.39,0.321
+early (first DE at 5-20 min),translation / ribosome biogenesis,ribosome biogenesis,189,1.27,0.00243
+middle (first DE at 30-45 min),nitrate transport,,0,,
+middle (first DE at 30-45 min),nitrate assimilation / N reduction,,0,,
+middle (first DE at 30-45 min),amino acid biosynthesis,amino acid biosynthetic process,12,1.12,1
+middle (first DE at 30-45 min),response to nitrate,response to nitrate,3,1.19,1
+middle (first DE at 30-45 min),pentose-phosphate / glycolysis,,0,,
+middle (first DE at 30-45 min),translation / ribosome biogenesis,ribosome biogenesis,35,1.13,1
+late (first DE at 60-120 min),nitrate transport,nitrate import,5,0.78,1
+late (first DE at 60-120 min),nitrate assimilation / N reduction,nitrate metabolic process,3,1.19,1
+late (first DE at 60-120 min),amino acid biosynthesis,amino acid biosynthetic process,24,0.97,1
+late (first DE at 60-120 min),response to nitrate,response to nitrate,4,0.69,1
+late (first DE at 60-120 min),pentose-phosphate / glycolysis,glycolytic process,12,1.29,1
+late (first DE at 60-120 min),translation / ribosome biogenesis,rRNA processing,71,1.31,0.513
+[|log2FC|>1] early (first DE at 5-20 min),nitrate transport,nitrate import,11,3.48,0.0248
+[|log2FC|>1] early (first DE at 5-20 min),nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] early (first DE at 5-20 min),amino acid biosynthesis,amino acid biosynthetic process,11,0.9,1
+[|log2FC|>1] early (first DE at 5-20 min),response to nitrate,response to nitrate,12,4.18,0.00708
+[|log2FC|>1] early (first DE at 5-20 min),pentose-phosphate / glycolysis,pentose-phosphate shunt,7,2.29,0.61
+[|log2FC|>1] early (first DE at 5-20 min),translation / ribosome biogenesis,rRNA processing,12,0.45,1
+[|log2FC|>1] middle (first DE at 30-45 min),nitrate transport,,0,,
+[|log2FC|>1] middle (first DE at 30-45 min),nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] middle (first DE at 30-45 min),amino acid biosynthesis,amino acid biosynthetic process,8,2.01,0.829
+[|log2FC|>1] middle (first DE at 30-45 min),response to nitrate,response to nitrate,3,3.21,1
+[|log2FC|>1] middle (first DE at 30-45 min),pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] middle (first DE at 30-45 min),translation / ribosome biogenesis,ribosome biogenesis,3,0.26,1
+[|log2FC|>1] late (first DE at 60-120 min),nitrate transport,nitrate import,3,0.98,1
+[|log2FC|>1] late (first DE at 60-120 min),nitrate assimilation / N reduction,nitrate assimilation,6,4.99,0.0583
+[|log2FC|>1] late (first DE at 60-120 min),amino acid biosynthesis,amino acid biosynthetic process,13,1.1,1
+[|log2FC|>1] late (first DE at 60-120 min),response to nitrate,response to nitrate,3,1.08,1
+[|log2FC|>1] late (first DE at 60-120 min),pentose-phosphate / glycolysis,pentose-phosphate shunt,3,1.01,1
+[|log2FC|>1] late (first DE at 60-120 min),translation / ribosome biogenesis,rRNA processing,48,1.85,0.00453
+unique to 5 min,nitrate transport,,0,,
+unique to 5 min,nitrate assimilation / N reduction,,0,,
+unique to 5 min,amino acid biosynthesis,alpha-amino acid biosynthetic process,3,2.25,1
+unique to 5 min,response to nitrate,,0,,
+unique to 5 min,pentose-phosphate / glycolysis,,0,,
+unique to 5 min,translation / ribosome biogenesis,,0,,
+unique to 10 min,nitrate transport,,0,,
+unique to 10 min,nitrate assimilation / N reduction,,0,,
+unique to 10 min,amino acid biosynthesis,alpha-amino acid biosynthetic process,6,1.01,1
+unique to 10 min,response to nitrate,,0,,
+unique to 10 min,pentose-phosphate / glycolysis,glycolytic process,3,1.24,1
+unique to 10 min,translation / ribosome biogenesis,rRNA processing,9,0.63,1
+unique to 15 min,nitrate transport,,0,,
+unique to 15 min,nitrate assimilation / N reduction,,0,,
+unique to 15 min,amino acid biosynthesis,alpha-amino acid biosynthetic process,10,1.6,0.813
+unique to 15 min,response to nitrate,,0,,
+unique to 15 min,pentose-phosphate / glycolysis,,0,,
+unique to 15 min,translation / ribosome biogenesis,rRNA processing,6,0.4,1
+unique to 20 min,nitrate transport,,0,,
+unique to 20 min,nitrate assimilation / N reduction,,0,,
+unique to 20 min,amino acid biosynthesis,,0,,
+unique to 20 min,response to nitrate,,0,,
+unique to 20 min,pentose-phosphate / glycolysis,,0,,
+unique to 20 min,translation / ribosome biogenesis,,0,,
+unique to 30 min,nitrate transport,,0,,
+unique to 30 min,nitrate assimilation / N reduction,,0,,
+unique to 30 min,amino acid biosynthesis,,0,,
+unique to 30 min,response to nitrate,,0,,
+unique to 30 min,pentose-phosphate / glycolysis,,0,,
+unique to 30 min,translation / ribosome biogenesis,,0,,
+unique to 45 min,nitrate transport,,0,,
+unique to 45 min,nitrate assimilation / N reduction,,0,,
+unique to 45 min,amino acid biosynthesis,,0,,
+unique to 45 min,response to nitrate,,0,,
+unique to 45 min,pentose-phosphate / glycolysis,,0,,
+unique to 45 min,translation / ribosome biogenesis,,0,,
+unique to 1 h,nitrate transport,,0,,
+unique to 1 h,nitrate assimilation / N reduction,,0,,
+unique to 1 h,amino acid biosynthesis,,0,,
+unique to 1 h,response to nitrate,,0,,
+unique to 1 h,pentose-phosphate / glycolysis,,0,,
+unique to 1 h,translation / ribosome biogenesis,rRNA processing,11,1.18,1
+unique to 1.5 h,nitrate transport,,0,,
+unique to 1.5 h,nitrate assimilation / N reduction,,0,,
+unique to 1.5 h,amino acid biosynthesis,amino acid biosynthetic process,3,1.29,1
+unique to 1.5 h,response to nitrate,,0,,
+unique to 1.5 h,pentose-phosphate / glycolysis,,0,,
+unique to 1.5 h,translation / ribosome biogenesis,,0,,
+unique to 2 h,nitrate transport,,0,,
+unique to 2 h,nitrate assimilation / N reduction,,0,,
+unique to 2 h,amino acid biosynthesis,alpha-amino acid biosynthetic process,11,1.26,1
+unique to 2 h,response to nitrate,response to nitrate,3,1.35,1
+unique to 2 h,pentose-phosphate / glycolysis,glycolytic process,5,1.41,1
+unique to 2 h,translation / ribosome biogenesis,rRNA processing,15,0.72,1
+[|log2FC|>1] unique to 5 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 5 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 5 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 5 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 5 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 5 min,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 10 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 10 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 10 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 10 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 10 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 10 min,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 15 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 15 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 15 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 15 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 15 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 15 min,translation / ribosome biogenesis,rRNA processing,4,0.51,1
+[|log2FC|>1] unique to 20 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 20 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 20 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 20 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 20 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 20 min,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 30 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 30 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 30 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 30 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 30 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 30 min,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 45 min,nitrate transport,,0,,
+[|log2FC|>1] unique to 45 min,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 45 min,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 45 min,response to nitrate,,0,,
+[|log2FC|>1] unique to 45 min,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 45 min,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 1 h,nitrate transport,,0,,
+[|log2FC|>1] unique to 1 h,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 1 h,amino acid biosynthesis,,0,,
+[|log2FC|>1] unique to 1 h,response to nitrate,,0,,
+[|log2FC|>1] unique to 1 h,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 1 h,translation / ribosome biogenesis,rRNA processing,10,2.09,1
+[|log2FC|>1] unique to 1.5 h,nitrate transport,,0,,
+[|log2FC|>1] unique to 1.5 h,nitrate assimilation / N reduction,,0,,
+[|log2FC|>1] unique to 1.5 h,amino acid biosynthesis,amino acid biosynthetic process,3,2.33,1
+[|log2FC|>1] unique to 1.5 h,response to nitrate,,0,,
+[|log2FC|>1] unique to 1.5 h,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 1.5 h,translation / ribosome biogenesis,,0,,
+[|log2FC|>1] unique to 2 h,nitrate transport,,0,,
+[|log2FC|>1] unique to 2 h,nitrate assimilation / N reduction,nitrate assimilation,4,7.83,0.216
+[|log2FC|>1] unique to 2 h,amino acid biosynthesis,alpha-amino acid biosynthetic process,6,1.29,1
+[|log2FC|>1] unique to 2 h,response to nitrate,,0,,
+[|log2FC|>1] unique to 2 h,pentose-phosphate / glycolysis,,0,,
+[|log2FC|>1] unique to 2 h,translation / ribosome biogenesis,rRNA processing,19,1.72,0.771

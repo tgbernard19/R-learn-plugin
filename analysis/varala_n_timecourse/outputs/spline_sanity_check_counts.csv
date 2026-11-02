@@ -1,0 +1,25 @@
+samples,time_scale,spline_df,FDR,n_genes,n_genes_max_abs_log2diff_gt1,prior_df
+all 57 samples,linear,3,0.01,1757,1680,6.8
+all 57 samples,linear,3,0.05,3242,2784,6.8
+all 57 samples,linear,4,0.01,5098,3845,6.2
+all 57 samples,linear,4,0.05,9838,6104,6.2
+all 57 samples,linear,5,0.01,4455,3662,5.7
+all 57 samples,linear,5,0.05,9227,6088,5.7
+all 57 samples,log,3,0.01,3470,2437,5.4
+all 57 samples,log,3,0.05,7213,3581,5.4
+all 57 samples,log,4,0.01,2905,2339,6.0
+all 57 samples,log,4,0.05,5781,3578,6.0
+all 57 samples,log,5,0.01,5268,3715,7.8
+all 57 samples,log,5,0.05,10002,5878,7.8
+without 10/15 min,linear,3,0.01,3355,3163,45.8
+without 10/15 min,linear,3,0.05,6056,5259,45.8
+without 10/15 min,linear,4,0.01,4940,4665,38.4
+without 10/15 min,linear,4,0.05,9059,7624,38.4
+without 10/15 min,linear,5,0.01,7433,6741,26.8
+without 10/15 min,linear,5,0.05,13988,9135,26.8
+without 10/15 min,log,3,0.01,4499,3514,25.4
+without 10/15 min,log,3,0.05,8345,4323,25.4
+without 10/15 min,log,4,0.01,4560,3897,24.1
+without 10/15 min,log,4,0.05,8905,5911,24.1
+without 10/15 min,log,5,0.01,5303,4790,27.5
+without 10/15 min,log,5,0.05,10461,7783,27.5
