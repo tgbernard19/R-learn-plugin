@@ -1,0 +1,13 @@
+agi,symbol,lfc_02,bonf_02,lfc_010,bonf_010,archetype,varala_lfc_120min
+AT1G08090,NRT2.1,0.356,1,-0.0978,1,not responsive,1.62
+AT1G12110,NRT1.1,-0.825,0.000116,-0.369,1,"early, transient (by 2 d, gone by 10 d)",0.52
+AT1G77760,NIA1,-2.38,0,-2.58,0,"early, sustained (by 2 d, still at 10 d)",1.03
+AT1G37130,NIA2,-0.0536,1,0.245,1,late (only after 2 d),0.02
+AT2G15620,NIR1,-1.6,0,-0.817,2.35e-05,"early, sustained (by 2 d, still at 10 d)",2.53
+AT4G37540,LBD39,-0.938,6.64e-07,-1.1,5.6e-12,"early, sustained (by 2 d, still at 10 d)",5.47
+AT5G60770,NRT2.4,0.969,1.42e-07,2.22,0,"early, still growing 2-10 d",-2.63
+AT1G13300,HRS1,-0.225,1,-0.95,2.79e-08,late (only after 2 d),2.16
+AT1G68670,HHO2,-0.198,1,-0.562,0.65,not responsive,2.47
+AT3G47340,ASN1,0.621,0.256,1.18,0,late (only after 2 d),5.35
+AT5G53460,GLT1,-1.2,0,-0.0416,1,"early, transient (by 2 d, gone by 10 d)",1.44
+AT1G24280,G6PD3,-1.63,0,-1.29,0,"early, sustained (by 2 d, still at 10 d)",2.84

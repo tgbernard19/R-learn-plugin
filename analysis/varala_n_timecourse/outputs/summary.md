@@ -108,9 +108,33 @@ GO BP, hypergeometric test, terms propagated through go-basic.obo, background = 
 - **Verdict.** "Uptake/reduction early" is supported, and "amino-acid synthesis later" is supported only at marker level.
 - **Genes unique to a single time point** give few or no significant terms, except at 5 min (respiratory chain, 6 genes) and 2 h (endomembrane transport, cell wall). This fits the idea that most single-point genes are noise rather than distinct biology.
 
-### Optional step 6 (Krapp et al. 2011): not done
+### Optional step 6: Krapp et al. 2011 starvation vs Varala resupply (`krapp_comparison.py`)
 
-GEO and NCBI are blocked here. I could not confirm the accession for Krapp et al. 2011 (PMID 21900481), and I did not want to guess one. If you supply the accession, or open network access to `www.ncbi.nlm.nih.gov`, the comparison can be added. It would be cross-lab, cross-platform (arrays vs RNA-seq), and starvation vs resupply, so any overlap would be suggestive only.
+**Flag first.** This compares long-term N *starvation* with minutes-to-hours N *resupply*, across labs and platforms (CATMA arrays vs RNA-seq). Any overlap is suggestive only.
+
+**Krapp's design**, from the paper's Supplemental Table VII (supplementary zip):
+- Roots after 0, 2 and 10 days of N starvation.
+- 2 biological replicates with dye swap; genes called at Bonferroni p < 0.05.
+- All comparisons are against day 0 of the same culture. There is no N-replete control at 2 or 10 days, so starvation is confounded with 10 days of growth.
+
+**Starvation archetypes in roots** (`krapp_root_starvation_archetypes.csv`):
+
+| archetype | down in starvation | up in starvation |
+|---|---|---|
+| early, sustained (by 2 d, still at 10 d) | 133 | 32 |
+| early, still growing 2–10 d | 27 | 28 |
+| early, transient (gone by 10 d) | 44 | 23 |
+| late (only after 2 d) | 556 | 697 |
+
+Most change happens *between 2 and 10 days*.
+
+**Direction: starvation is the mirror image of resupply** (`krapp_vs_varala_overlap.csv`):
+- **Overlap is enriched.** At every Varala time point the overlap with Krapp's DE genes is larger than chance (odds ratio 1.4–8).
+- **Shared genes move oppositely.** From 20 min on, 73–92% of shared genes go in opposite directions. Log2FC correlation on the overlap runs from ρ −0.38 to −0.71 and strengthens with resupply time: genes repressed by starvation are induced by resupply.
+- **5 min doesn't follow** (66% *same* direction for the 0–10 d comparison), consistent with the technical concern about that point.
+- **Early resupply genes concentrate in the "early, sustained" class.** Genes DE at 5 or 20 min are enriched about 4× in it (3.3% vs 0.8% of all genes); NIA1, NIR1, LBD39 and G6PD3 are all down by day 2 and still down at day 10.
+- **NRT2.4 is a clean low-N marker.** It goes up in starvation (+2.2 log2FC by 10 d) and down on resupply.
+- **Time span.** Krapp adds coarse information on the days scale: 2 d and 10 d only, with nothing past 10 d.
 
 ### (3) Caveats
 

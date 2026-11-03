@@ -5,7 +5,8 @@ after N resupply? Used to judge which early sampling points in a planned Avena
 time course are redundant. Results and caveats: `outputs/summary.md`.
 
 ```
-data/      downloads only (git-ignored; recreate with scripts/fetch_data.sh)
+data/      downloads only (git-ignored; recreate with scripts/fetch_data.sh;
+           Krapp 2011 supplementary zip extracted by hand to data/krapp_supp/x/)
 scripts/   fetch_data.sh + list of GEO per-sample files
 outputs/   varala_timepoint_redundancy.py, figures (PNG), CSVs, summary.md
 cache/     cached pydeseq2 fits and run log (git-ignored)
@@ -16,4 +17,5 @@ Reproduce (Python 3.11+, `pip install pydeseq2 statsmodels matplotlib patsy`):
 ```bash
 bash scripts/fetch_data.sh
 python3 -I outputs/varala_timepoint_redundancy.py --recompute
+python3 -I outputs/krapp_comparison.py   # needs the Krapp supplementary zip
 ```
